@@ -37,7 +37,7 @@ export default {
       return [
         { text: this.$t('ID'), value: 'id' },
         { text: this.$t('Name'), value: 'name', sortable: false },
-        { text: this.$t('Balance'), value: 'balance', align: 'right', format: 'decimal' },
+        // { text: this.$t('Balance'), value: 'balance', align: 'right', format: 'decimal' },
         { text: this.$t('Updated'), value: 'updated_ago', align: 'right' },
         { value: 'actions', sortable: false, align: 'right' }
       ]

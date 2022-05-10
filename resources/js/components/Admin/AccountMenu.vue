@@ -22,7 +22,7 @@
           <v-list-item-title>{{ $t('Transactions') }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item :to="{ name: 'admin.accounts.debit', params: { id } }" exact>
+      <!-- <v-list-item :to="{ name: 'admin.accounts.debit', params: { id } }" exact>
         <v-list-item-icon>
           <v-icon :small="small">mdi-minus</v-icon>
         </v-list-item-icon>
@@ -37,7 +37,7 @@
         <v-list-item-content>
           <v-list-item-title>{{ $t('Credit') }}</v-list-item-title>
         </v-list-item-content>
-      </v-list-item>
+      </v-list-item> -->
     </v-list>
   </v-menu>
 </template>

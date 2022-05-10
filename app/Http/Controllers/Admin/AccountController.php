@@ -31,8 +31,16 @@ class AccountController extends Controller
 
     public function show(Account $account)
     {
+        $user = $account->load('user');
+
+        $url = config('define.api_balance.domain') . '/api/get-balance/social/' . $user->user->social_id;
+        
+        $body = $this->callapi('GET', $url, []);
+
+        $body['user'] = $user->user;
+
         return [
-            'account' => $account->load('user')
+            'account' => $body
         ];
     }
 
