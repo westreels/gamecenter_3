@@ -193,10 +193,8 @@ abstract class GameService
         // make ID hidden
         $this->provablyFairGame->game->makeHidden(['id']);
         $this->provablyFairGame->game->gameable->makeHidden(['id']);
+        
         $this->provablyFairGame->game->account = $this->user->account['data']['data'];
-        if($this->user->account['data']['data'] = []){
-            return $this;
-        }
         // $this->user->account['data']['data']['balance'] - $this->provablyFairGame->game->bet + $this->provablyFairGame->game->win
         // array_merge($this->provablyFairGame->game->account, ['balance' => 0]);
         $data = $this->provablyFairGame->game->account;
