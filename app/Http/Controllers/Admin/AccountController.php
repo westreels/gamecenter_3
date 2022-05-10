@@ -11,9 +11,11 @@ use App\Models\Account;
 use App\Models\GenericAccountTransaction;
 use App\Services\AccountService;
 use Illuminate\Http\Request;
+use App\Http\Traits\CallApiTraits;
 
 class AccountController extends Controller
 {
+    use CallApiTraits;
     public function index(AccountQuery $query)
     {
         $items = $query
