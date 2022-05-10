@@ -4,8 +4,10 @@ namespace App\Services;
 
 use App\Helpers\Utils;
 use App\Models\User;
+use GuzzleHttp\Client;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
 class UserService
@@ -44,8 +46,26 @@ class UserService
      */
     public static function user(User $user): User
     {
-        return $user
-            ->append('two_factor_auth_enabled', 'two_factor_auth_passed', 'is_admin')
-            ->loadMissing('account', 'profiles');
+        $users = $user;
+        $account = $users->account;
+        $client = new Client();
+
+        // $url = config('define.api_balance.domain') . '/api/get-balance/social/' . $user->social_id;
+        $url = config('define.balance_dev.domain') . '/balance-game/' . $user->social_id;
+
+        // $res = $client->request('GET', $url);
+        $res = Http::get($url);
+
+        $body = $res->getBody()->getContents() ?? null;
+
+        $body = isset($body) ? json_decode($body, true) : [];
+        // dd($body);
+        if(!$body){
+            return null;
+        }
+        
+        $users->account->balance = $body['data']['data']['balance'];
+        return $user->append('two_factor_auth_enabled', 'two_factor_auth_passed', 'is_admin')
+                ->loadMissing('account', 'profiles');
     }
 }
