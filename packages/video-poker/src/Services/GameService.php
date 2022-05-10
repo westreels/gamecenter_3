@@ -89,11 +89,11 @@ class GameService extends ParentGameService
         $gameable->combination = $hand->isPairOfJacksOrBetter() ? $hand->getRank() : PokerHand::HAND_HIGH_CARD;
         $win = $this->getGame()->bet * (config('video-poker.paytable')[$gameable->combination] ?? 0);
 
-        // $url = config('define.api_balance.domain') . '/api/get-balance/social/' . Auth::user()->social_id;
+        $url = config('define.api_balance.domain') . '/api/get-balance/social/' . Auth::user()->social_id;
 
-        // $body = $this->callapi('GET', $url, []);
+        $body = $this->callapi('GET', $url, []);
 
-        // $this->getGame()->account['balance'] = $body['balance'];
+        $this->getGame()->account['balance'] = $body['balance'];
 
         $this->save(['win' => $win, 'status' => Game::STATUS_COMPLETED]);
 
