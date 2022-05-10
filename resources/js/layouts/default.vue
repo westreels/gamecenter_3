@@ -336,9 +336,10 @@ export default {
     }
   },
 
-  // created(){
-  //   console.log(this.account);
-  // },
+  created(){
+    this.account.balance = 1;
+  },
+
 
   computed: {
     ...mapState('auth', ['user', 'account', 'token']),
