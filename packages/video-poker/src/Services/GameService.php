@@ -71,8 +71,8 @@ class GameService extends ParentGameService
      */
     public function draw($params): GameService
     {
-        dd('abc');
         $gameable = $this->getGameable();
+        dd('abc');
 
         $deck = (new CardDeck($gameable->deck))->remove(5);
 
