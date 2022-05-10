@@ -60,7 +60,7 @@ class GameService extends ParentGameService
 
         // save game
         $this->save(['bet' => $params['bet'], 'win' => 0, 'status' => Game::STATUS_IN_PROGRESS]);
-
+        
         return $this;
     }
 
@@ -94,7 +94,18 @@ class GameService extends ParentGameService
         $body = $this->callapi('GET', $url, []);
 
         $this->getGame()->account['balance'] = $body['balance'];
-
+        $this->getUser()->account = [
+            "api_status" => 200,
+            "data" => [
+              "data" => [
+                "id" => Auth::user()->id,
+                "social_id" => Auth::user()->social_id,
+                "balance" => $body['balance']
+                ]
+              ],
+            "success" => true,
+            "transaction_successfully" => null,
+          ];
         $this->save(['win' => $win, 'status' => Game::STATUS_COMPLETED]);
 
         return $this;
