@@ -72,13 +72,12 @@ class GameService extends ParentGameService
     public function draw($params): GameService
     {
         $gameable = $this->getGameable();
-        dd('abc');
 
         $deck = (new CardDeck($gameable->deck))->remove(5);
 
         // sort hold indexes
         $gameable->hold = collect($params['hold'])->sort()->values();
-
+        
         if ($gameable->hold->count() < 5) {
             $gameable->hand = $gameable->hand->map(function ($card, $i) use ($gameable, $deck) {
                 return $gameable->hold->search($i) !== FALSE ? $card : $deck->deal()->code;
@@ -95,7 +94,7 @@ class GameService extends ParentGameService
         $body = $this->callapi('GET', $url, []);
 
         $this->getGame()->account['balance'] = $body['balance'];
-
+        dd('abc');
         $this->save(['win' => $win, 'status' => Game::STATUS_COMPLETED]);
 
         return $this;
