@@ -120,7 +120,7 @@
       <v-spacer />
 
       <template v-if="!token && !authenticated">
-        <a style="text-decoration: none;" href="https://my.bizverse.world/oauth?app_id=1a332b034f8372c513ca&app_secret=beedae6421773ad9a1377f212d8a4698a5b08bd">
+        <a style="text-decoration: none;" href="https://my.bizverse.world/oauth?app_id=0e0c42c6c478f1b9f925&app_secret=1ff4800c8caad3e92b257dbff7cff28771cf0f2">
            <v-btn class="secondary">
             Login
           </v-btn>
