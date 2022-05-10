@@ -1,0 +1,25 @@
+{
+    "id": "payments",
+    "name": "Payments",
+    "type": "add-on",
+    "description": "This add-on enables deposits and withdrawals.",
+    "providers": [
+        "Packages\\Payments\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "payments",
+    "source_path": "src",
+    "namespace": "Packages\\Payments\\",
+    "static": {
+        "PaymentsPackageSeeder": "database/seeders",
+        "PaymentGatewaySeeder": "database/seeders",
+        "PaymentGatewayMethodSeeder": "database/seeders",
+        "DepositMethodSeeder": "database/seeders",
+        "WithdrawalMethodSeeder": "database/seeders"
+    },
+    "system_requirements": [
+        "PHP GMP extension"
+    ],
+    "purchase_url": "https://bit.ly/stake-payments-add-on",
+    "min_app_version": "1.15.0",
+    "hash": "5af32b42bb9f2e6090d1cfad39a4a41d"
+}

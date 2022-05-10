@@ -1,0 +1,32 @@
+{
+  "name": "babel-merge",
+  "version": "3.0.0",
+  "main": "src/index.js",
+  "author": "Eli Perelman <eli@eliperelman.com>",
+  "license": "MIT",
+  "repository": "neutrinojs/babel-merge",
+  "engines:": {
+    "node": ">=6.10.0"
+  },
+  "scripts": {
+    "test": "ava --fail-fast test/babel-merge_test.js"
+  },
+  "dependencies": {
+    "deepmerge": "^2.2.1",
+    "object.omit": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "ava": "^1.4.1",
+    "fast-async": "^6.3.7"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  }
+}

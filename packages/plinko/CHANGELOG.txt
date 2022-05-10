@@ -1,0 +1,7 @@
+Plinko
+------
+
+CHANGES HISTORY
+---------------
+v1.0.0 - 19 January 2021
+- Initial release.

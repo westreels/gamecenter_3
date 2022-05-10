@@ -1,0 +1,26 @@
+{
+    "name": "@types/imagemin-mozjpeg",
+    "version": "8.0.0",
+    "description": "TypeScript definitions for imagemin-mozjpeg",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Jeff Chan",
+            "url": "https://github.com/hkjeffchan",
+            "githubUsername": "hkjeffchan"
+        }
+    ],
+    "main": "",
+    "types": "index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/imagemin-mozjpeg"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/imagemin": "*"
+    },
+    "typesPublisherContentHash": "c7851403ff895cae078d6d1bf0088071812d12a6bc23ea7d1d8d280be098f453",
+    "typeScriptVersion": "2.0"
+}

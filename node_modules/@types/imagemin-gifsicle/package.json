@@ -1,0 +1,31 @@
+{
+    "name": "@types/imagemin-gifsicle",
+    "version": "7.0.0",
+    "description": "TypeScript definitions for imagemin-gifsicle",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Romain Faust",
+            "url": "https://github.com/romain-faust",
+            "githubUsername": "romain-faust"
+        },
+        {
+            "name": "Piotr Błażejewicz",
+            "url": "https://github.com/peterblazejewicz",
+            "githubUsername": "peterblazejewicz"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/imagemin-gifsicle"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/imagemin": "*"
+    },
+    "typesPublisherContentHash": "ea3e4fe4d195bbee7a3767d73e06835bbde8b3d9a8e7a575a0ac056f2ab0a0be",
+    "typeScriptVersion": "3.2"
+}

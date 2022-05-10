@@ -1,0 +1,20 @@
+{
+    "id": "crash",
+    "name": "Crash",
+    "type": "game",
+    "description": "This add-on implements Crash game.",
+    "providers": [
+        "Packages\\Crash\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "crash",
+    "source_path": "src",
+    "namespace": "Packages\\Crash\\",
+    "static": {},
+    "system_requirements": [
+        "VPS or dedicated server with shell access",
+        "Pusher integration"
+    ],
+    "purchase_url": "https://codecanyon.net/item/crash-addon-for-stake-casino-gaming-platform/34684134",
+    "min_app_version": "1.15.0",
+    "hash": "3bc723242c35ea7c3e48cb77fee8d8dd"
+}

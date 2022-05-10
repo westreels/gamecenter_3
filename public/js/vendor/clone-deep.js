@@ -1,0 +1,22 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["vendor/clone-deep"],{
+
+/***/ "./node_modules/clone-deep/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/clone-deep/index.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\n/**\n * Module dependenices\n */\n\nconst clone = __webpack_require__(/*! shallow-clone */ \"./node_modules/shallow-clone/index.js\");\nconst typeOf = __webpack_require__(/*! kind-of */ \"./node_modules/kind-of/index.js\");\nconst isPlainObject = __webpack_require__(/*! is-plain-object */ \"./node_modules/is-plain-object/index.js\");\n\nfunction cloneDeep(val, instanceClone) {\n  switch (typeOf(val)) {\n    case 'object':\n      return cloneObjectDeep(val, instanceClone);\n    case 'array':\n      return cloneArrayDeep(val, instanceClone);\n    default: {\n      return clone(val);\n    }\n  }\n}\n\nfunction cloneObjectDeep(val, instanceClone) {\n  if (typeof instanceClone === 'function') {\n    return instanceClone(val);\n  }\n  if (instanceClone || isPlainObject(val)) {\n    const res = new val.constructor();\n    for (let key in val) {\n      res[key] = cloneDeep(val[key], instanceClone);\n    }\n    return res;\n  }\n  return val;\n}\n\nfunction cloneArrayDeep(val, instanceClone) {\n  const res = new val.constructor(val.length);\n  for (let i = 0; i < val.length; i++) {\n    res[i] = cloneDeep(val[i], instanceClone);\n  }\n  return res;\n}\n\n/**\n * Expose `cloneDeep`\n */\n\nmodule.exports = cloneDeep;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvY2xvbmUtZGVlcC9pbmRleC5qcz85Njc1Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFhOztBQUViO0FBQ0E7QUFDQTs7QUFFQSxjQUFjLG1CQUFPLENBQUMsNERBQWU7QUFDckMsZUFBZSxtQkFBTyxDQUFDLGdEQUFTO0FBQ2hDLHNCQUFzQixtQkFBTyxDQUFDLGdFQUFpQjs7QUFFL0M7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0EsaUJBQWlCLGdCQUFnQjtBQUNqQztBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUEiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvY2xvbmUtZGVlcC9pbmRleC5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0JztcblxuLyoqXG4gKiBNb2R1bGUgZGVwZW5kZW5pY2VzXG4gKi9cblxuY29uc3QgY2xvbmUgPSByZXF1aXJlKCdzaGFsbG93LWNsb25lJyk7XG5jb25zdCB0eXBlT2YgPSByZXF1aXJlKCdraW5kLW9mJyk7XG5jb25zdCBpc1BsYWluT2JqZWN0ID0gcmVxdWlyZSgnaXMtcGxhaW4tb2JqZWN0Jyk7XG5cbmZ1bmN0aW9uIGNsb25lRGVlcCh2YWwsIGluc3RhbmNlQ2xvbmUpIHtcbiAgc3dpdGNoICh0eXBlT2YodmFsKSkge1xuICAgIGNhc2UgJ29iamVjdCc6XG4gICAgICByZXR1cm4gY2xvbmVPYmplY3REZWVwKHZhbCwgaW5zdGFuY2VDbG9uZSk7XG4gICAgY2FzZSAnYXJyYXknOlxuICAgICAgcmV0dXJuIGNsb25lQXJyYXlEZWVwKHZhbCwgaW5zdGFuY2VDbG9uZSk7XG4gICAgZGVmYXVsdDoge1xuICAgICAgcmV0dXJuIGNsb25lKHZhbCk7XG4gICAgfVxuICB9XG59XG5cbmZ1bmN0aW9uIGNsb25lT2JqZWN0RGVlcCh2YWwsIGluc3RhbmNlQ2xvbmUpIHtcbiAgaWYgKHR5cGVvZiBpbnN0YW5jZUNsb25lID09PSAnZnVuY3Rpb24nKSB7XG4gICAgcmV0dXJuIGluc3RhbmNlQ2xvbmUodmFsKTtcbiAgfVxuICBpZiAoaW5zdGFuY2VDbG9uZSB8fCBpc1BsYWluT2JqZWN0KHZhbCkpIHtcbiAgICBjb25zdCByZXMgPSBuZXcgdmFsLmNvbnN0cnVjdG9yKCk7XG4gICAgZm9yIChsZXQga2V5IGluIHZhbCkge1xuICAgICAgcmVzW2tleV0gPSBjbG9uZURlZXAodmFsW2tleV0sIGluc3RhbmNlQ2xvbmUpO1xuICAgIH1cbiAgICByZXR1cm4gcmVzO1xuICB9XG4gIHJldHVybiB2YWw7XG59XG5cbmZ1bmN0aW9uIGNsb25lQXJyYXlEZWVwKHZhbCwgaW5zdGFuY2VDbG9uZSkge1xuICBjb25zdCByZXMgPSBuZXcgdmFsLmNvbnN0cnVjdG9yKHZhbC5sZW5ndGgpO1xuICBmb3IgKGxldCBpID0gMDsgaSA8IHZhbC5sZW5ndGg7IGkrKykge1xuICAgIHJlc1tpXSA9IGNsb25lRGVlcCh2YWxbaV0sIGluc3RhbmNlQ2xvbmUpO1xuICB9XG4gIHJldHVybiByZXM7XG59XG5cbi8qKlxuICogRXhwb3NlIGBjbG9uZURlZXBgXG4gKi9cblxubW9kdWxlLmV4cG9ydHMgPSBjbG9uZURlZXA7XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/clone-deep/index.js\n");
+
+/***/ })
+
+}]);

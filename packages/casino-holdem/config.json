@@ -1,0 +1,16 @@
+{
+    "id": "casino-holdem",
+    "name": "Casino Hold'em",
+    "type": "game",
+    "description": "This add-on implements Casino Hold'em game.",
+    "providers": [
+        "Packages\\CasinoHoldem\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "casino-holdem",
+    "source_path": "src",
+    "namespace": "Packages\\CasinoHoldem\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/casino-holdem-addon-for-stake-casino-gaming-platform/27345845",
+    "min_app_version": "1.15.0",
+    "hash": "f608ecc7652b420fb41ac65f109b7e01"
+}

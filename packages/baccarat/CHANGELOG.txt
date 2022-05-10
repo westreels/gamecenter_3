@@ -1,0 +1,34 @@
+Baccarat
+---------
+
+CHANGES HISTORY
+---------------
+v1.1.0 - 4 March 2022
+- New game design implemented.
+
+v1.0.8 - 20 May 2020
+- Bug fix: the 3rd card is sometimes the same for both player and banker.
+
+v1.0.7 - 3 November 2020
+- Bug fix: 3rd card should not be drawn if either banker or player gets 8 or 9.
+
+v1.0.6 - 26 June 2020
+- Ability to assign categories to the game and filter available games by categories on the front page.
+
+v1.0.5 - 19 June 2020
+- Minor code refactoring.
+
+v1.0.4 - 03 June 2020
+- Ability to set custom background image on the game page.
+
+v1.0.3 - 19 May 2020
+- Ability to edit the games image displayed on the home page.
+
+v1.0.2 - 23 March 2020
+- Security improvement.
+
+v1.0.1 - 23 January 2019
+- Minor fixes.
+
+v1.0.0 - 27 December 2019
+- Initial release.

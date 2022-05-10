@@ -1,0 +1,16 @@
+{
+    "id": "slots-3d",
+    "name": "Slots 3D",
+    "type": "game",
+    "description": "This add-on implements Slots 3D game.",
+    "providers": [
+        "Packages\\Slots3D\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "slots-3d",
+    "source_path": "src",
+    "namespace": "Packages\\Slots3D\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/slots-3d-addon-for-stake-casino-gaming-platform/33455533",
+    "min_app_version": "1.15.0",
+    "hash": "8d784f86850d04a2e1c2cbdd9f7b3d7e"
+}

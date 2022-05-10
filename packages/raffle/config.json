@@ -1,0 +1,16 @@
+{
+    "id": "raffle",
+    "name": "Raffle",
+    "type": "add-on",
+    "description": "This add-on implements Raffles (lotteries).",
+    "providers": [
+        "Packages\\Raffle\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "raffle",
+    "source_path": "src",
+    "namespace": "Packages\\Raffle\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/raffle-lottery-addon-for-stake-casino-gaming-platform/27709060",
+    "min_app_version": "1.15.0",
+    "hash": "56034661eeb0ec307da0d1beb790b870"
+}

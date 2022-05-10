@@ -1,0 +1,16 @@
+{
+    "id": "heads-or-tails",
+    "name": "Heads Or Tails",
+    "type": "game",
+    "description": "This add-on implements Heads Or Tails game.",
+    "providers": [
+        "Packages\\HeadsOrTails\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "heads-or-tails",
+    "source_path": "src",
+    "namespace": "Packages\\HeadsOrTails\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/heads-or-tails-addon-for-stake-casino-gaming-platform/26373254",
+    "min_app_version": "1.15.0",
+    "hash": "00bdfa17bd218bbb51798c05a96c4843"
+}

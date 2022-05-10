@@ -1,0 +1,76 @@
+<h6 class="text-h6 mb-3">Table of contents</h6>
+
+<a href="#q01" class="d-block">Post-installation steps</a>
+<a href="#q05" class="d-block">Steps to take after saving the game settings</a>
+<a href="#q02" class="d-block">What is the base number?</a>
+<a href="#q03" class="d-block">How do payout intervals work?</a>
+<a href="#q04" class="d-block">Why is the max payout sometimes exceeded?</a>
+
+<div id="q01" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">Post-installation steps</h6>
+  <ul>
+    <li>
+      Integrate Pusher (<a href="/admin/help/app#q28">read more</a>)
+    </li>
+    <li>
+      Enable queues (<a href="/admin/help/app#q27">read more</a>)
+    </li>
+  </ul>
+</div>
+
+<div id="q05" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">Steps to take after saving the game settings</h6>
+  <ul>
+    <li>Open <a href="/admin/maintenance">Maintenance</a> page.</li>
+    <li>Scroll down to <b>Cache</b> block and click <b>Clear cache</b> button.</li>
+    <li>Scroll down to <b>Queues</b> block and Click <b>Stop queue worker</b> button (if the supervisor is configured properly the queue worker process will restart automatically).</li>
+    <li>Open <b>Crash game</b> page and refresh it.</li>
+  </ul>
+</div>
+
+<div id="q02" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">What is the base number?</h6>
+  <p>
+    At any given time the current payout is calculated as follows:
+  </p>
+  <pre>
+    P = N ^ T
+  </pre>
+  <p>
+    This is an exponential function, where <code>N</code> is the base number defined in the settings and <code>T</code> is the current game duration
+    (the number of seconds elapsed since the start of the game).
+    The base number affects the speed at which the payout grows during the game.
+    The higher the number, the faster the payout will increase and therefore the faster the crash will happen.
+    It is recommended to change the base number gradually in 0.01 increments.
+  </p>
+</div>
+
+<div id="q03" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How do payout intervals work?</h6>
+  <p>
+    The payout (crash number) for each game is generated in 2 stages.
+    First, one of the payout intervals is randomly selected.
+    After that, a random decimal number is selected in this interval.
+    This random number is the payout of the game (or the number at which the rocket will crash).
+  </p>
+  <p>
+    You can use payout intervals to influence the overall game payouts.
+    For instance, to reduce the return to player (and hence increase the house edge)
+    you can create many intervals with small payouts and leave only few with large payouts.
+    In this case, at the first stage, one of the small payout intervals is more likely to be selected, and large payouts will be rare.
+    The last payout interval determines the maximum possible payout in the game.
+  </p>
+</div>
+
+<div id="q04" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">Why is the max payout sometimes exceeded?</h6>
+  <p>
+    As explained above the payout is generated randomly before the start of the game.
+    Then this number is used to calculate the game duration and the crash event time.
+    A delayed job is scheduled for this time to finish the game and send the crash event to all connected players.
+    The queue worker should pick up this job at the given time and process it.
+    It can happen that the queue worker picks up the job a bit later than the scheduled time.
+    Thus the original payout will no longer be correct and will be recalculated, which in turn will cause the payout to increase.
+    If the original payout was close or equal to the max payout the new payout may be higher.
+    If the queues are working properly, such cases should be rare.
+</div>

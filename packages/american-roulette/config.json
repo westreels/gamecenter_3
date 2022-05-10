@@ -1,0 +1,16 @@
+{
+    "id": "american-roulette",
+    "name": "American roulette",
+    "type": "game",
+    "description": "This add-on implements American roulette game.",
+    "providers": [
+        "Packages\\AmericanRoulette\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "american-roulette",
+    "source_path": "src",
+    "namespace": "Packages\\AmericanRoulette\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/american-roulette-addon-for-stake-casino-gaming-platform/25861124",
+    "min_app_version": "1.15.0",
+    "hash": "e8dfc8fce9e56b93ea89e17d2ed163b9"
+}

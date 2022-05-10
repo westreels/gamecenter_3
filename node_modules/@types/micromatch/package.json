@@ -1,0 +1,24 @@
+{
+    "name": "@types/micromatch",
+    "version": "2.3.30",
+    "description": "TypeScript definitions for micromatch",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "glen-84",
+            "url": "https://github.com/glen-84",
+            "githubUsername": "glen-84"
+        }
+    ],
+    "main": "",
+    "repository": {
+        "type": "git",
+        "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/parse-glob": "*"
+    },
+    "typesPublisherContentHash": "d876c790b88592effdeecae609fb6a9ad19f1d2a7612d9c26409dd609e46e0dd",
+    "typeScriptVersion": "2.0"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "@types/parse-glob",
+    "version": "3.0.29",
+    "description": "TypeScript definitions for parse-glob 3.0.4",
+    "license": "MIT",
+    "author": "glen-84 <https://github.com/glen-84>",
+    "main": "",
+    "repository": {
+        "type": "git",
+        "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "typings": "index.d.ts",
+    "typesPublisherContentHash": "edc8dc9d8e186c6ecb2bc9d12aea10c9c207e25b8e3830decfa5622b12add037"
+}

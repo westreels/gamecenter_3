@@ -1,0 +1,19 @@
+Lucky Wheel
+-----------
+
+CHANGES HISTORY
+---------------
+v1.0.4 - 2 November 2020
+- Blur filter disabled due to a bug in Chrome browser.
+
+v1.0.3 - 17 August 2020
+- Ability to re-order Lucky wheel games in the settings (affects the display order on the front page and in the main menu).
+
+v1.0.2 - 26 June 2020
+- Ability to assign categories to the game and filter available games by categories on the front page.
+
+v1.0.1 - 19 June 2020
+- Bug fix: bots don't play this game.
+
+v1.0.0 - 09 June 2020
+- Initial release.

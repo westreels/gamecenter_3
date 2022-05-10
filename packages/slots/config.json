@@ -1,0 +1,16 @@
+{
+    "id": "slots",
+    "name": "Slots",
+    "type": "game",
+    "description": "This add-on implements Slots game.",
+    "providers": [
+        "Packages\\Slots\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "slots",
+    "source_path": "src",
+    "namespace": "Packages\\Slots\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/multi-slots-addon-for-stake-casino-gaming-platform/26067950",
+    "min_app_version": "1.15.0",
+    "hash": "d7514900be69cd16295320c9ae902b20"
+}

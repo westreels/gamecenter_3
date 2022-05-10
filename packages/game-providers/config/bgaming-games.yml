@@ -1,0 +1,665 @@
+---
+#- title: Acceptance Test
+#  identifier: acceptance:test
+#  provider: bgaming
+#  category: slots
+#  feature_group: basic
+#  devices:
+#    - desktop
+#    - mobile
+- title: All Lucky Clover
+  identifier: AllLuckyClover
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: All Lucky Clover 100
+  identifier: AllLuckyClover100
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: All Lucky Clover 20
+  identifier: AllLuckyClover20
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: All Lucky Clover 40
+  identifier: AllLuckyClover40
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: All Lucky Clover 5
+  identifier: AllLuckyClover5
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Aloha King Elvis
+  identifier: AlohaKingElvis
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: American Roulette
+  identifier: AmericanRoulette
+  provider: bgaming
+  category: roulette
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: 'Avalon: The Lost Kingdom'
+  identifier: Avalon
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Aztec Magic
+  identifier: AztecMagic
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Aztec Magic Deluxe
+  identifier: AztecMagicDeluxe
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Aztec Magic Megaways
+  identifier: AztecMagicMegaways
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Baccarat
+  identifier: Baccarat
+  provider: bgaming
+  category: card
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Multihand Blackjack Pro
+  identifier: BlackjackPro
+  provider: bgaming
+  category: card
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Blackjack Surrender
+  identifier: BlackjackSurrender
+  provider: bgaming
+  category: card
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Bob's Coffee Shop
+  identifier: BobsCoffeeShop
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Bonanza Billion
+  identifier: BonanzaBillion
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Book of Cats
+  identifier: BookOfCats
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Book of Pyramids
+  identifier: BookOfPyramids
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Brave Viking
+  identifier: BraveViking
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Candy Monsta
+  identifier: CandyMonsta
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Caribbean Poker
+  identifier: CaribbeanPoker
+  provider: bgaming
+  category: poker
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Casino Hold'em
+  identifier: CasinoHoldem
+  provider: bgaming
+  category: poker
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Cherry Fiesta
+  identifier: CherryFiesta
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Crazy Starter
+  identifier: CrazyStarter
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Deep Sea
+  identifier: DeepSea
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Desert Treasure
+  identifier: DesertTreasure
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Dig Dig Digger
+  identifier: DigDigDigger
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Domnitors
+  identifier: Domnitors
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Domnitors Deluxe
+  identifier: DomnitorsDeluxe
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Double Exposure
+  identifier: DoubleExposure
+  provider: bgaming
+  category: card
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Dragon's Gold 100
+  identifier: DragonsGold100
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Elvis Frog In Vegas
+  identifier: ElvisFrog
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: European Roulette
+  identifier: EuropeanRoulette
+  provider: bgaming
+  category: roulette
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Fantasy Park
+  identifier: FantasyPark
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Fire Lightning
+  identifier: FireLightning
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Four Lucky Clover
+  identifier: FourLuckyClover
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Four Lucky Diamonds
+  identifier: FourLuckyDiamonds
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: French Roulette
+  identifier: FrenchRoulette
+  provider: bgaming
+  category: roulette
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Fruit Million
+  identifier: FruitMillion
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Hawaii Cocktails
+  identifier: HawaiiCocktails
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Heads and Tails
+  identifier: HeadsTails
+  provider: bgaming
+  category: casual
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Hello Easter
+  identifier: HelloEaster
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Hi-Lo Switch
+  identifier: HiLoSwitch
+  provider: bgaming
+  category: card
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Hit The Route
+  identifier: HitTheRoute
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Jacks or Better
+  identifier: JacksOrBetter
+  provider: bgaming
+  category: video_poker
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Jogo Do Bicho
+  identifier: JogoDoBicho
+  provider: bgaming
+  category: lottery
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Johnny Cash
+  identifier: JohnnyCash
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Journey Flirt
+  identifier: JourneyFlirt
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Lucky Blue
+  identifier: LuckyBlue
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Lucky Dama Muerta
+  identifier: LuckyDamaMuerta
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Lucky Lady's Clover
+  identifier: LuckyLadyClover
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Lucky Lady's Moon
+  identifier: LuckyLadyMoon
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Lucky Sweets
+  identifier: LuckySweets
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Mechanical Clover
+  identifier: MechanicalClover
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Mechanical Orange
+  identifier: MechanicalOrange
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Minesweeper
+  identifier: Minesweeper
+  provider: bgaming
+  category: casual
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Miss Cherry Fruits
+  identifier: MissCherryFruits
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Multihand Blackjack
+  identifier: MultihandBlackjack
+  provider: bgaming
+  category: card
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Oasis Poker
+  identifier: OasisPoker
+  provider: bgaming
+  category: poker
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Platinum Lightning
+  identifier: PlatinumLightning
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Platinum Lightning Deluxe
+  identifier: PlatinumLightningDeluxe
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Plinko
+  identifier: Plinko
+  provider: bgaming
+  category: casual
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Plinko Crypto
+  identifier: PlinkoCrypto
+  provider: bgaming
+  category: casual
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Pontoon
+  identifier: Pontoon
+  provider: bgaming
+  category: card
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Princess of Sky
+  identifier: PrincessOfSky
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Princess Royal
+  identifier: PrincessRoyal
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Road 2 Riches
+  identifier: Road2Riches
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Rocket Dice
+  identifier: RocketDice
+  provider: bgaming
+  category: dice
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Rocket Dice Crypto
+  identifier: RocketDiceCrypto
+  provider: bgaming
+  category: dice
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Scratch Dice
+  identifier: ScratchDice
+  provider: bgaming
+  category: casual
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Scroll of Adventure
+  identifier: ScrollOfAdventure
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Sic Bo
+  identifier: SicBo
+  provider: bgaming
+  category: dice
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Sic Bo Macau
+  identifier: SicBoMacau
+  provider: bgaming
+  category: dice
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Slotomon Go
+  identifier: SlotomonGo
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Space XY
+  identifier: SpaceXY
+  provider: bgaming
+  category: casual
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Spin And Spell
+  identifier: SpinAndSpell
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Texas Hold'em
+  identifier: TexasHoldem
+  provider: bgaming
+  category: poker
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Trey Poker
+  identifier: TreyPoker
+  provider: bgaming
+  category: poker
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: WBC Ring Of Riches
+  identifier: WbcRingOfRiches
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: West Town
+  identifier: WestTown
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Wild Texas
+  identifier: WildTexas
+  provider: bgaming
+  category: video_poker
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile
+- title: Zorro Wild Heart
+  identifier: ZorroWildHeart
+  provider: bgaming
+  category: slots
+  feature_group: basic
+  devices:
+  - desktop
+  - mobile

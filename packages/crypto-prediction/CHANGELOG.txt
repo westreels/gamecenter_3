@@ -1,0 +1,19 @@
+Crypto Prediction
+-----------------
+
+CHANGES HISTORY
+---------------
+v1.1.1 - 2 November 2021
+- Bug fix: "No internet" error in Firefox.
+
+v1.1.0 - 10 September 2021
+- Cryptocompare.com API integrated.
+
+v1.0.2 - 8 July 2021
+- Some fixes for cases when server and client time is different.
+
+v1.0.1 - 30 June 2021
+- Bots support added.
+
+v1.0.0 - 26 June 2021
+- Initial release.

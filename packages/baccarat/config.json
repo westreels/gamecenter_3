@@ -1,0 +1,16 @@
+{
+    "id": "baccarat",
+    "name": "Baccarat",
+    "type": "game",
+    "description": "This add-on implements Baccarat game.",
+    "providers": [
+        "Packages\\Baccarat\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "baccarat",
+    "source_path": "src",
+    "namespace": "Packages\\Baccarat\\",
+    "static": {},
+    "purchase_url": "",
+    "min_app_version": "1.15.0",
+    "hash": ""
+}

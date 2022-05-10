@@ -1,0 +1,17 @@
+{
+  "name": "proxy-method",
+  "version": "1.0.0",
+  "description": "Straight-forward way of interception method(s) before and/or after its execution.",
+  "homepage": "https://github.com/Erutan409/proxy-method",
+  "main": "src/Proxy.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Erutan409/proxy-method.git"
+  },
+  "keywords": [
+    "proxy",
+    "method"
+  ],
+  "author": "Michael Keyser",
+  "license": "MIT"
+}

@@ -1,0 +1,47 @@
+{
+    "name": "@types/browser-sync",
+    "version": "2.26.1",
+    "description": "TypeScript definitions for browser-sync",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Asana",
+            "url": "https://asana.com"
+        },
+        {
+            "name": "Joe Skeen",
+            "url": "https://github.com/joeskeen",
+            "githubUsername": "joeskeen"
+        },
+        {
+            "name": "Thomas \"Thasmo\" Deinhamer",
+            "url": "https://thasmo.com/"
+        },
+        {
+            "name": "Kiyotoshi Ichikawa",
+            "url": "https://github.com/aznnomness",
+            "githubUsername": "aznnomness"
+        },
+        {
+            "name": "Yuma Hashimoto",
+            "url": "https://github.com/yuma84",
+            "githubUsername": "yuma84"
+        }
+    ],
+    "main": "",
+    "types": "index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/browser-sync"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/micromatch": "^2",
+        "@types/node": "*",
+        "@types/serve-static": "*",
+        "chokidar": "^2.1.2"
+    },
+    "typesPublisherContentHash": "7a2ffea898be3730bfb6cb167b71962973d742a954a2a30bae7da8869cbd6d1b",
+    "typeScriptVersion": "2.3"
+}

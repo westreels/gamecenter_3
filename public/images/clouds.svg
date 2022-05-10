@@ -1,0 +1,10 @@
+<svg height="512" viewBox="0 0 128 128" width="512" xmlns="http://www.w3.org/2000/svg">
+    <g style="transform-origin: top left; ">
+        <animateTransform attributeName="transform" begin="0s" type="scale" dur="3s" values="1;.99;1" repeatCount="indefinite"/>
+        <path d="m47.31 71.057c.12 0 .236.014.355.018a21.073 21.073 0 0 1 40.654-7.444 16.44 16.44 0 0 1 26.451 7.469c.253-.018.505-.038.762-.038a10.719 10.719 0 0 1 0 21.437h-68.222a10.719 10.719 0 0 1 0-21.437z" fill="#beebfa"/>
+    </g>
+    <g style="transform-origin: bottom right; ">
+        <animateTransform attributeName="transform" begin="1s" type="scale" dur="5s" values="1;.98;1" repeatCount="indefinite"/>
+        <path d="m11.471 54.3c.233 0 .461.019.69.035a14.908 14.908 0 0 1 23.989-6.774 19.107 19.107 0 0 1 36.463 3.15 21.018 21.018 0 0 0 -24.948 20.364c-.119 0-.235-.018-.355-.018a10.663 10.663 0 0 0 -7.073 2.679h-28.766a9.721 9.721 0 1 1 0-19.441z" fill="#9ee2f8"/>
+    </g>
+</svg>

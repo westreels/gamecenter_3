@@ -1,0 +1,581 @@
+<h6 class="text-h6 mb-3">Table of contents</h6>
+
+<a href="#q12" class="d-block">How to install an add-on?</a>
+<a href="#q10" class="d-block">How to upgrade the app to a new version?</a>
+<a href="#q16" class="d-block">How to add a redirect from http to https?</a>
+<a href="#q13" class="d-block">I get "Session store not set on request" error</a>
+<a href="#q01" class="d-block">How to enable social login?</a>
+<a href="#q28" class="d-block">How to integrate Pusher?</a>
+<a href="#q02" class="d-block">How to enable chat?</a>
+<a href="#q21" class="d-block">How to add bots?</a>
+<a href="#q20" class="d-block">Why bots do not play games?</a>
+<a href="#q22" class="d-block">What is faucet?</a>
+<a href="#q23" class="d-block">What is chat rain?</a>
+<a href="#q24" class="d-block">How to add Google Analytics?</a>
+<a href="#q03" class="d-block">How to change the OG image?</a>
+<a href="#q04" class="d-block">How to change the favicon?</a>
+<a href="#q05" class="d-block">How to change translations?</a>
+<a href="#q17" class="d-block">How to add a new language?</a>
+<a href="#q06" class="d-block">How to add custom CSS rules?</a>
+<a href="#q14" class="d-block">How to change the logo size in the header?</a>
+<a href="#q15" class="d-block">How to hide the site title in the header?</a>
+<a href="#q07" class="d-block">How to override manifest.json?</a>
+<a href="#q18" class="d-block">How to disable reCAPTCHA?</a>
+<a href="#q08" class="d-block">How to disable the maintenance mode if I logged out from the admin account?</a>
+<a href="#q09" class="d-block">How to add a custom card deck?</a>
+<a href="#q27" class="d-block">How to enable queues?</a>
+<a href="#q19" class="d-block">Why application settings are not saved?</a>
+<a href="#q26" class="d-block">Why application logo and user avatar are not displayed?</a>
+<a href="#q25" class="d-block">What is stream_socket_enable_crypto error about?</a>
+<a href="#q29" class="d-block">How to fix "Process class relies on proc_open, which is not available on your PHP installation"?</a>
+<a href="#q11" class="d-block">How to get support?</a>
+
+<div id="q12" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to install an add-on?</h6>
+  <ul>
+    <li>Open <b>Add-ons</b> page, find the purchased add-on in the list and click <b>Install</b> button.</li>
+    <li>Input the purchase code and click <b>Proceed</b> button.</li>
+  </ul>
+  <p class="mt-2">
+    The add-on will be automatically downloaded and installed.
+    Refresh the page in your browser, so the new add-on is loaded and initialized by the application.
+  </p>
+</div>
+
+<div id="q10" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to upgrade the app to a new version?</h6>
+  <ul>
+    <li>Back up the application files and database.</li>
+    <li>Go to <b>Backend</b> » <b>Maintenance</b> page and click <b>Enable maintenance mode</b>.</li>
+    <li>Download the latest application package from CodeCanyon, upload it to your server and unzip (overwrite all existing files).</li>
+    <li>Go to <b>Backend</b> » <b>Maintenance</b> page and click <b>Update database</b> and then <b>Clear cache</b> button.</li>
+    <li>Go to <b>Backend</b> » <b>Add-ons</b> page and click <b>Re-install</b> for every installed add-on.</li>
+    <li>Go to <b>Backend</b> » <b>Maintenance</b> and click <b>Disable maintenance mode</b>.</li>
+    <li>Clear cache in your browser and refresh the page</li>
+    <li>Check that the application and all games are working correctly.</li>
+  </ul>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        If you use any external cache services or CDN (e.g. Cloudflare) make sure to clear all caches there as well.
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="q16" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to add a redirect from http to https?</h6>
+  <p>
+    If you like to add an auto redirect from http:// to https:// uncomment the below 2 lines in <b>.htaccess</b> file
+    (located in the web root folder):
+  </p>
+  <pre>RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  </pre>
+  <p>
+    Please note that if the web root is set to <b>../public</b> folder, you need to edit <b>../public/.htaccess</b> file instead.
+  </p>
+</div>
+
+<div id="q13" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">I get "Session store not set on request" error</h6>
+  <p>
+    This error can happen when you use both <b>www</b> (www.mywebsite.com) and <b>non-www</b> (mywebsite.com)
+    domain names at the same time. It's recommended to use only one of these variations.
+    If, however, you still like to use both, open .env file (located in the web root folder of your domain) with a text editor and edit <b>SANCTUM_STATEFUL_DOMAINS</b> variable
+    to contain both domain names as follows:
+  </p>
+  <pre>SANCTUM_STATEFUL_DOMAINS=mywebsite.com,www.mywebsite.com</pre>
+</div>
+
+<div id="q01" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to enable social login?</h6>
+  <p>
+    To enable authentication (using OAuth) with one of the supported social providers (Facebook, Twitter, Google, LinkedIn, Yahoo, Coinbase, Steem) complete the following steps.
+  </p>
+  <ul>
+    <li>Log in to a developers platform (for instance, Facebook for developers is located at
+      <a href="https://developers.facebook.com/" target="_blank">developers.facebook.com</a>).
+    </li>
+    <li>Create a new web application and fill in necessary details (such as name, URL of your website etc).</li>
+    <li>
+      Specify <b>Callback URL</b> (can also be called <b>Redirect URL</b>) as
+      <i>https://YOURWEBSITE.COM/api/ouath/PROVIDER/callback</i> (example: https://mycasino.com/api/ouath/facebook/callback). For your convenience Callback URLs for each provider are displayed under
+      <b>OAuth Providers</b> tab on the <b>Settings</b> page.
+    </li>
+    <li>Obtain <b>Client ID</b> and <b>Client secret</b> (they can also be called <b>App ID</b> and <b>App secret</b>,
+      <b>Consumer key</b> and <b>Consumer secret</b> and alike).
+    </li>
+    <li>Input <b>Client ID</b> and <b>Client secret</b> on the <b>Settings</b> page (<b>Integration</b> tab).</li>
+  </ul>
+  <p>Here is how the app settings page looks like on Facebook for developers:</p>
+  <img src="/images/help/facebook-oauth.jpg" width="100%" height="375px">
+  <p>Things to note:</p>
+  <ul>
+    <li>Social login will not work on localhost</li>
+    <li>Your website should have an SSL certificate installed and enabled</li>
+  </ul>
+</div>
+
+<div id="q28" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to integrate Pusher?</h6>
+  <p>
+    <a href="https://pusher.com/" rel="nofollow" target="_blank">Pusher</a> is a service, which allows to add realtime messaging capabilities to the application.
+    Without it such features as chat and game feed as well as all multiplayer games will not function.
+    To enable Pusher:
+  </p>
+  <ul class="mb-1">
+    <li>
+      Sign up at
+      <a href="https://pusher.com/" rel="nofollow" target="_blank">Pusher</a>, create a new
+      <b>channels app</b> and obtain its credentials (app ID, key, secret and cluster).
+    </li>
+    <li>
+      Go to <b>Backend</b> » <b>Settings</b> » <b>Services</b> » <b>Pusher</b> and input the above credentials.
+    </li>
+  </ul>
+</div>
+
+<div id="q02" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to enable chat?</h6>
+  <ul class="mb-1">
+    <li>
+      Integrate <b>Pusher</b> service (<a href="/admin/help/app#q28">read more</a>).
+    </li>
+    <li>
+      Create at least one chat room on <b>Backend</b> » <b>Chat</b> page.
+    </li>
+    <li>
+      Refresh the browser page.
+    </li>
+  </ul>
+</div>
+
+<div id="q21" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to add bots?</h6>
+  <ul class="mb-1">
+    <li>
+      Open <b>Backend</b> » <b>Maintenance</b> page, under <b>Tasks</b> select <b>Create bots</b>, choose the number of bots
+      and click <b>Execute</b>.
+    </li>
+    <li>
+      Go to <b>Backend</b> » <b>Settings</b> » <b>Bots</b> » <b>Games</b> and configure bots settings.
+    </li>
+  </ul>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        Make sure that the cron job specified on <b>Backend</b> » <b>Maintenance</b> page is added to your server.
+        Please check the installation guide for more info how to set up a cron job.
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="q20" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">Why bots do not play games?</h6>
+  <p>
+    Make sure that the cron job specified on <b>Backend</b> » <b>Maintenance</b> page is added to your server.
+    Please check the installation guide for more info how to set up a cron job.
+  </p>
+</div>
+
+<div id="q22" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">What is faucet?</h6>
+  <p>
+    Faucet allows users to claim free credits on a regular basis (e.g. every 24 hours).
+    Users can claim free credits by clicking on the balance in the top right corner and selecting <b>Faucet</b>.
+    If you like to turn this feature off go to <b>Backend</b> » <b>Settings</b> » <b>Bonuses</b> » <b>Faucet</b>
+    and set <b>Allow to claim</b> value to zero.
+  </p>
+</div>
+
+<div id="q23" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">What is chat rain?</h6>
+  <p>
+    Chat rain is a type of bonus that is awarded to the most active users in the chat (those who posted more text).
+    You can configure the chat rain settings by going to <b>Backend</b> » <b>Settings</b> » <b>Bonuses</b> » <b>Chat rain</b>.
+    To turn this feature off delete <b>Chat rain payouts</b>.
+  </p>
+</div>
+
+<div id="q24" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to add Google Analytics?</h6>
+  <ul>
+    <li>Open <a href="https://tagmanager.google.com/" target="_blank">Google Tag Manager</a>,
+      create a new <b>Account</b> and add a new <b>Container</b> to it.
+    </li>
+    <li>
+      Follow <a href="https://support.google.com/tagmanager/answer/6107124?hl=en" target="_blank">this guide</a>
+      to add a Google Analytics tag to the created container.
+    </li>
+    <li>
+      Go to <b>Backend</b> » <b>Settings</b> » <b>Services</b> » <b>Google Tag Manager</b>
+      and input <b>GTM Container ID</b>.
+    </li>
+  </ul>
+</div>
+
+<div id="q03" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to change the OG image?</h6>
+  <p>
+    The OG image is used when sharing website content on social media.
+    To override the default OG image create an image file named
+    <b>og-image-udf.jpg</b> and put it to
+    <b>public/images/logo</b> folder. This way you will be able to keep your custom OG image during future updates.
+  </p>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        Please note that OG images are usually cached by social networks,
+        so after you override the default OG image it might take some time
+        before the social network picks it up.
+        Facebook has useful <a href="https://developers.facebook.com/tools/debug/" target="_blank">Sharing Debugger</a> tool.
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="q04" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to change the favicon?</h6>
+  <p>
+    The website favicon files are located in
+    <b>public/images/favicon</b> folder. You can just overwrite the original files with your custom ones.
+  </p>
+</div>
+
+<div id="q05" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to change translations?</h6>
+  <p>
+    You can change translation strings for any language by editing JSON translation files in
+    <b>resources/lang</b> folder. To override the default text strings in English edit
+    <b>resources/lang/en.json</b> file and modify only values of the translation object (the right part).
+  </p>
+</div>
+
+<div id="q17" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to add a new language?</h6>
+  <ul>
+    <li>Add a new language to <b>locales</b> array in <b>config/app.php</b>.</li>
+    <li>
+      Add a new language file named <b>LANG_ISO_CODE.json</b> (e.g. al.json for Albanian) to <b>resources/lang</b> folder
+      (you can copy it from any existing translation file and then add your custom translations).
+    </li>
+  </ul>
+</div>
+
+<div id="q06" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to add custom CSS rules?</h6>
+  <p>
+    If you like to apply some custom CSS styles create a file named <b>style-udf.css</b> inside
+    <b>public/css</b> folder and put your styles there.
+    This will help you to preserve your custom styles after upgrading the app to a new version.
+  </p>
+</div>
+
+<div id="q14" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to change the logo size in the header?
+  </h6>
+  <p>
+    Create a file named <b>style-udf.css</b> inside <b>public/css</b> folder and paste the following CSS rules there:
+  </p>
+  <pre>header .v-toolbar__title .v-avatar {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+footer .router-link-active .v-avatar {
+  width: 60px !important;
+  height: 60px !important;
+}
+  </pre>
+  <p>
+    Use the following CSS rule to increase the logo size on login and registration pages:
+  </p>
+  <pre>.view-login .router-link-active .v-avatar,
+.view-register .router-link-active .v-avatar,
+.view-password-reset .router-link-active .v-avatar,
+.view-password-email .router-link-active .v-avatar {
+  width: 60px !important;
+  height: 60px !important;
+}
+  </pre>
+</div>
+
+<div id="q15" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to hide the site title in the header?</h6>
+  <p>
+    Create a file named <b>style-udf.css</b> inside <b>public/css</b> folder and paste the following CSS rule there:
+  </p>
+  <pre>header .v-toolbar__title .d-sm-block {
+  display: none !important;
+}
+  </pre>
+</div>
+
+<div id="q07" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to override manifest.json?</h6>
+  <p>
+    <b>manifest.json</b> file contains the app name and references to logo images,
+    which are used when someone adds the app to the home screen of an iOS / Android device.
+    In order to modify the default values (if you like to run the casino under your own name)
+    you need to override the default manifest file by creating a file named
+    <b>manifest-udf.json</b> inside
+    <b>public</b> folder. Create it as a copy of the default manifest.json and then edit as needed. Clear browser cache after that to ensure the new file is loaded.
+  </p>
+</div>
+
+<div id="q18" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to disable reCAPTCHA?</h6>
+  <p>
+    If you do not have access to backend you can disable reCAPTCHA by
+    editing .env configuration file (located in the web root folder) and removing the following variables:
+  </p>
+  <pre>RECAPTCHA_PUBLIC_KEY
+RECAPTCHA_SECRET_KEY
+  </pre>
+</div>
+
+<div id="q08" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to disable the maintenance mode if I logged out from the admin account?</h6>
+  <p>
+    To disable the maintenance mode when you don't have access to the backend delete the following file:
+    <b>storage/framework/down</b>.
+  </p>
+</div>
+
+<div id="q09" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to add a custom card deck?</h6>
+  <p>
+    Create a new subfolder in <b>public/images/games/playing-cards</b> folder, e.g.
+    <b>custom</b>. Upload playing card images in PNG format to this folder. Each file name should consist of 2 letters. The first letter is the suite code (d - diamonds ♦, c - clubs ♣, h - hearts ♥, s - spades ♠), the second letter is the card value (t - 10, j - Jack, q - Queen, k - King, a - Ace). For instance st.png is Ten of Spades, ha.png is Ace of Hearts.
+    Additionally there should be a file named
+    <b>back.png</b>, which contains the back side of a playing card. You can check the default deck images to understand the naming conventions better.
+  </p>
+  <p>
+    After the new deck images are uploaded open <b>Backend</b> » <b>Settings</b> » <b>Games</b> and select the custom deck that you added, click <b>Save</b>.
+  </p>
+</div>
+
+<div id="q27" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to enable queues?</h6>
+  <p>
+    Queues are a mechanism for executing certain tasks at a given time in the background.
+    You only need to enable them if a particular game add-on requires queues support. Such a requirement is present on the
+    <a href="/admin/add-ons" target="_blank">Add-ons</a> page.
+  </p>
+  <p>
+    For the queues to work, a separate background process (called queue worker) must be running on your server in the background.
+    To be able to run such processes, the application must be deployed on a virtual private (VPS) or dedicated server with shell access.
+    You will not be able to run background processes on a shared server.
+    The queue worker can be started as follows:
+  </p>
+  <pre>
+    cd /var/www/stake
+    php artisan queue:work --queue=multiplayer-games,default
+  </pre>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        <p>
+          Please note that here and after:
+        </p>
+        <ul>
+          <li>
+            <b>/var/www/stake</b> should be replaced with the Stake installation folder (displayed on the <a href="/admin/maintenance" target="_blank">Maintenance</a> page).
+          </li>
+          <li>
+            <b>php</b> should be replaced with the absolute path to PHP executable (displayed on the <a href="/admin/maintenance" target="_blank">Maintenance</a> page).
+          </li>
+        </ul>
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+  <p>
+    Please note that the queue worker process may stop running for a variety of reasons,
+    such as an exceeded worker timeout, server fault etc.
+    For this reason, you need to configure a process monitor that can detect when your worker processes exit and automatically restart them.
+    <b>Supervisor</b> is a process monitor for the Linux operating system, and will automatically restart your queue:work processes if they fail.
+    To install Supervisor use the following command:
+  </p>
+  <pre>
+    apt-get install supervisor (on Ubuntu)
+    yum install supervisor (on CentOS)
+  </pre>
+  <p>
+    Supervisor configuration files are typically stored in the following folder:
+  </p>
+  <pre>
+    /etc/supervisor/conf.d (on Ubuntu)
+    /etc/supervisord.d (on CentOS)
+  </pre>
+  <p>
+    Within this directory, you may create any number of configuration files that instruct supervisor how your processes should be monitored.
+    Change to this directory and create a new file called <b>stake-worker.conf</b> (on Ubuntu) or <b>stake-worker.ini</b> (on CentOS).
+    Paste the following lines there:
+  </p>
+  <pre>[program:stake-worker]
+process_name=%(program_name)s_%(process_num)02d
+command=php /var/www/stake/artisan queue:work --queue=multiplayer-games,default
+autostart=true
+autorestart=true
+stopasgroup=true
+killasgroup=true
+user=www-data
+numprocs=1
+redirect_stderr=true
+stdout_logfile=/var/log/stake-worker.log
+stopwaitsecs=3600
+  </pre>
+  <p>
+    In the above file, it is important to make sure you have specified correctly:
+  </p>
+  <ul>
+    <li>Absolute path to PHP executable</li>
+    <li>Stake installation folder</li>
+    <li>System user</li>
+  </ul>
+  <p class="mt-2">
+    After creating the configuration file, you can start (or restart) the supervisor service using the following command:
+  </p>
+  <pre>
+    service supervisor restart (on Ubuntu)
+    service supervisord restart (on CentOS)
+  </pre>
+  <p>
+    To ensure that the supervisor has picked up your config file and is working correctly, use the following command:
+  </p>
+  <pre>
+    service supervisor status (on Ubuntu)
+    service supervisord status (on CentOS)
+  </pre>
+  <p>
+    You should see an output similar to the one below (without any error messages):
+  </p>
+  <pre>
+[root@server www]# service supervisord status
+<span class="green--text">●</span> supervisord.service - Process Monitoring and Control Daemon
+Loaded: loaded (/usr/lib/systemd/system/supervisord.service; disabled; vendor preset: disabled)
+Active: active (running) since Fri 2000-11-26 08:48:42 CET;
+Process: 1119947 ExecStart=/usr/bin/supervisord -c /etc/supervisord.conf (code=exited, status=0/SUCCESS)
+Main PID: 1119950 (supervisord)
+Tasks: 2 (limit: 101102)
+Memory: 68.6M
+CGroup: /system.slice/supervisord.service
+       ├─1119950 /usr/bin/python3.6 /usr/bin/supervisord -c /etc/supervisord.conf
+       └─1119951 /usr/bin/php /var/www/stake/artisan queue:work --queue=multiplayer-games,default
+
+</pre>
+  <p>
+    For more information on Supervisor, consult the <a href="http://supervisord.org/index.html" target="_blank">Supervisor documentation</a>.
+  </p>
+  <p>
+    Queues can work using different drivers. At the moment <b>Database</b> and <b>Redis</b> drivers are supported.
+    The Database driver is selected by default and it does not need anything else to work.
+    To use the Redis driver you need to additionally install and configure <a href="https://redis.io/" target="_blank">Redis</a>
+    on your server (installation of Redis is out of scope of the documentation and support).
+    It is recommended to use the Redis driver, especially if you expect a lot of traffic.
+  </p>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        <p class="mb-0">
+          Application cache should be cleared and the queue worker process should be restarted after changing the driver.
+        </p>
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="q19" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">Why application settings are not saved?</h6>
+  <p>
+    Check that <b>putenv</b> and <b>getenv</b> PHP functions are not disabled
+    (not added to <b>disable_functions</b> list in php.ini).
+  </p>
+  <p>
+    Apart from that please make sure not to cache the application config file with <b>php artisan config:cache</b> command.
+    If you did so please run <b>php artisan config:clear</b> command.
+  </p>
+</div>
+
+<div id="q26" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">Why application logo and user avatar are not displayed?</h6>
+  <p>
+    It's likely that necessary symlinks do not exist.
+  </p>
+  <p>
+    Go to <b>Backend</b> » <b>Maintenance</b> page and under <b>Tasks</b> select <b>Call artisan command</b>, input <b>storage:link</b> into <b>Name</b> field
+    and click <b>Execute</b>. Refresh the page.
+  </p>
+</div>
+
+<div id="q25" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">What is stream_socket_enable_crypto error about?</h6>
+  <p>
+    The following or similar exception is raised when sending an email:
+  </p>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left error--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        stream_socket_enable_crypto(): Peer certificate CN=`xxx.secureserver.net'
+        did not match expected CN=`smtp.gmail.com'
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+  <p>
+    What it means is that your SMTP connection is being intercepted and redirected elsewhere,
+    so the name no longer matches. This is TLS doing its job properly, preventing man in the middle attacks,
+    and stopping your credentials being given away to an unknown third party.
+    It usually happens when your hosting provider blocks any external 3rd party SMTP services (e.g. Gmail) and forces to use their own.
+    So please check with your hosting support what SMTP credentials you should use to send emails.
+  </p>
+</div>
+
+<div id="q29" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to fix "Process class relies on proc_open, which is not available on your PHP installation"?</h6>
+  <p>
+    The following error is printed in the log file when running the cron job:
+  </p>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left error--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        Process class relies on proc_open, which is not available on your PHP installation
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+  <p>
+    There are 2 possible solutions:
+  </p>
+  <ol>
+    <li>Remove <b>proc_open</b> from <b>disable_functions</b> parameter in <b>php.ini</b></li>
+    <li>Add the following parameter to the cron job command: <b>-d disable_functions=</b></li>
+  </ol>
+</div>
+
+<div id="q11" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to get support?</h6>
+  <p>
+    Please note that support can only be provided during the application support period. 6 months of free support are provided with your purchase. Should you need support outside of this period you will need to renew it.
+    <a href="https://help.market.envato.com/hc/en-us/articles/207886473-Extending-and-Renewing-Item-Support" target="_blank"> How to extend / renew the app support? </a>
+  </p>
+  <p>
+    To get technical support please submit a new ticket at
+    <a href="https://support.financialplugins.com" target="_blank">https://support.financialplugins.com</a>. If you see an application error please do the following:
+  </p>
+  <ul>
+    <li>Enable <b>Debug mode</b> (<b>Backend</b> » <b>Settings</b> » <b>Logging</b>)</li>
+    <li>Repeat the error</li>
+    <li>Make a screenshot of the error</li>
+    <li>Check the browser console and make a screenshot if there are any errors</li>
+    <li>Provide the above information along with the app error log (can be found in <b>storage/logs</b> folder)</li>
+    <li>Provide steps to reproduce the error</li>
+  </ul>
+</div>

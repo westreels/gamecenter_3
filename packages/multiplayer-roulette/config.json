@@ -1,0 +1,19 @@
+{
+    "id": "multiplayer-roulette",
+    "name": "Multiplayer Roulette",
+    "type": "game",
+    "description": "This add-on implements Multiplayer Roulette game.",
+    "providers": [
+        "Packages\\MultiplayerRoulette\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "multiplayer-roulette",
+    "source_path": "src",
+    "namespace": "Packages\\MultiplayerRoulette\\",
+    "static": {},
+    "system_requirements": [
+        "Pusher integration"
+    ],
+    "purchase_url": "https://codecanyon.net/item/multiplayer-roulette-addon-for-stake-casino-gaming-platform/32258732",
+    "min_app_version": "1.15.0",
+    "hash": "05ae9bcf86ddb49c68a527d37e6445cb"
+}

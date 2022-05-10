@@ -1,0 +1,16 @@
+{
+    "id": "blackjack",
+    "name": "Blackjack",
+    "type": "game",
+    "description": "This add-on implements Blackjack game.",
+    "providers": [
+        "Packages\\Blackjack\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "blackjack",
+    "source_path": "src",
+    "namespace": "Packages\\Blackjack\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/blackjack-addon-for-stake-casino-gaming-platform/25382743",
+    "min_app_version": "1.15.0",
+    "hash": "1c333530fc747b891ae7aca63491f519"
+}

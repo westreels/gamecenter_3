@@ -1,0 +1,42 @@
+<?php
+
+namespace App\Http\Requests;
+
+use App\Rules\OneTimePasswordIsCorrect;
+use App\Rules\PasswordIsCorrect;
+use Illuminate\Foundation\Http\FormRequest;
+
+class DisableTwoFactorAuth extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        // TOTP token is NOT NULL (2FA is enabled)
+        return $this->user()->two_factor_auth_enabled;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        $user = $this->user()->loadMissing('profiles');
+
+        return [
+            'one_time_password' => [
+                'required',
+                new OneTimePasswordIsCorrect($user->totp_secret)
+            ],
+            // if user logged in through social media don't require password verification, because they don't have it
+            'password' => $user->profiles->isEmpty()
+                ? ['required', new PasswordIsCorrect($user)]
+                : ''
+        ];
+    }
+}

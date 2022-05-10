@@ -1,0 +1,64 @@
+{
+  "name": "matter-js",
+  "version": "0.16.1",
+  "license": "MIT",
+  "homepage": "http://brm.io/matter-js/",
+  "author": "Liam Brummitt <liam@brm.io> (http://brm.io/)",
+  "description": "a 2D rigid body physics engine for the web",
+  "main": "build/matter.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liabru/matter-js.git"
+  },
+  "keywords": [
+    "javascript",
+    "canvas",
+    "html5",
+    "physics",
+    "physics engine",
+    "game engine",
+    "rigid body physics"
+  ],
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.1.1",
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "jest-worker": "^24.9.0",
+    "json-stringify-pretty-compact": "^2.0.0",
+    "matter-tools": "^0.12.3",
+    "matter-wrap": "^0.2.0",
+    "mock-require": "^3.0.3",
+    "pathseg": "^1.2.0",
+    "poly-decomp": "^0.3.0",
+    "puppeteer-core": "^5.5.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.1"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --watch-content-base",
+    "build": "webpack --mode=production & webpack --mode=production --env.MINIMIZE",
+    "build-alpha": "webpack --mode=production --env.ALPHA & webpack --mode=production --env.MINIMIZE --env.ALPHA",
+    "build-examples": "webpack --config webpack.examples.config.js --mode=production & webpack --config webpack.examples.config.js --mode=production --env.MINIMIZE",
+    "build-examples-alpha": "webpack --config webpack.examples.config.js --mode=production --env.ALPHA & webpack --config webpack.examples.config.js --mode=production --env.MINIMIZE --env.ALPHA",
+    "build-demo": "mkdir -p demo/lib && cp node_modules/matter-tools/build/matter-tools.demo.js demo/lib & cp node_modules/matter-tools/build/matter-tools.gui.js demo/lib & cp node_modules/matter-tools/build/matter-tools.inspector.js demo/lib & cp node_modules/pathseg/pathseg.js demo/lib & cp node_modules/poly-decomp/build/decomp.js demo/lib & cp node_modules/matter-wrap/build/matter-wrap.js demo/lib",
+    "lint": "eslint 'src/**/*.js' 'demo/js/Demo.js' 'demo/js/Compare.js' 'examples/*.js' 'webpack.*.js'",
+    "doc": "yuidoc --config yuidoc.json --project-version $npm_package_version",
+    "test": "npm run test-node",
+    "test-all": "jest --no-cache",
+    "test-save": "SAVE=true npm run test-node",
+    "test-watch": "npm run test-node -- --watch",
+    "test-node": "jest --no-cache ./test/Examples.spec.js",
+    "test-browser": "jest --no-cache ./test/Browser.spec.js",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r",
+    "release": "npm version --no-git-tag-version",
+    "preversion": "git checkout master && npm run lint && SAVE=true npm run test-all",
+    "version": "git checkout -b release/$npm_package_version && npm run build"
+  },
+  "dependencies": {},
+  "files": [
+    "src",
+    "build",
+    "CHANGELOG.md"
+  ]
+}

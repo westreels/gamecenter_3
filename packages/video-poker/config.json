@@ -1,0 +1,16 @@
+{
+    "id": "video-poker",
+    "name": "Video Poker",
+    "type": "game",
+    "description": "This add-on implements Video Poker game.",
+    "providers": [
+        "Packages\\VideoPoker\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "video-poker",
+    "source_path": "src",
+    "namespace": "Packages\\VideoPoker\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/video-poker-addon-for-stake-casino-gaming-platform/25588739",
+    "min_app_version": "1.15.0",
+    "hash": "19c78a62993d630d3b40ad1168693e08"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "financialplugins/omnipay-etherscan",
+  "type": "library",
+  "description": "Etherscan driver for the Omnipay payment processing library",
+  "keywords": [
+    "omnipay",
+    "etherscan",
+    "ethereum",
+    "crypto"
+  ],
+  "homepage": "https://github.com/financialplugins/omnipay-etherscan",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "FinancialPlugins",
+      "email": "info@financialplugins.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Omnipay\\Etherscan\\" : "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "omnipay/common": "^3.0",
+    "php-http/guzzle7-adapter": "*"
+  },
+  "require-dev": {
+    "omnipay/tests": "^3.0"
+  }
+}

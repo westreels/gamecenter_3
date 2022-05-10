@@ -1,0 +1,16 @@
+{
+    "id": "lucky-wheel",
+    "name": "Lucky Wheel",
+    "type": "game",
+    "description": "This add-on implements Lucky Wheel game.",
+    "providers": [
+        "Packages\\LuckyWheel\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "lucky-wheel",
+    "source_path": "src",
+    "namespace": "Packages\\LuckyWheel\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/lucky-wheel-addon-for-stake-casino-gaming-platform/27128739",
+    "min_app_version": "1.15.0",
+    "hash": "c1bc4a44178b645ed22e92cf4bf106e1"
+}

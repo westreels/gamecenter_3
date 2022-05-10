@@ -1,0 +1,16 @@
+{
+    "id": "keno",
+    "name": "Keno",
+    "type": "game",
+    "description": "This add-on implements Keno game.",
+    "providers": [
+        "Packages\\Keno\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "keno",
+    "source_path": "src",
+    "namespace": "Packages\\Keno\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/keno-addon-for-stake-casino-gaming-platform/31643671",
+    "min_app_version": "1.15.0",
+    "hash": "78eaa1d14623567e18d8c46fb0ef8b21"
+}

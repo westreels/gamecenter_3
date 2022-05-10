@@ -1,0 +1,13 @@
+Multiplayer Roulette
+--------------------
+
+CHANGES HISTORY
+---------------
+v1.1.0 - 11 November 2021
+- Proper bots support added (using queues). VPS or dedicated server is required.
+
+v1.0.1 - 23 September 2021
+- Minor technical improvements.
+
+v1.0.0 - 21 May 2021
+- Initial release.

@@ -1,0 +1,16 @@
+{
+    "id": "game-providers",
+    "name": "Game providers",
+    "type": "provider",
+    "description": "This add-on integrates 3rd party game providers.",
+    "providers": [
+        "Packages\\GameProviders\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "game-providers",
+    "source_path": "src",
+    "namespace": "Packages\\GameProviders\\",
+    "static": {},
+    "purchase_url": "https://bit.ly/game-providers-integration-package",
+    "min_app_version": "1.0.0",
+    "hash": "154e2a461f5d549de2ae255999a8a480"
+}

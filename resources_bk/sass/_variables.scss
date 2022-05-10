@@ -1,0 +1,8 @@
+$playing-card-sm-breakpoint: 959px;
+
+$playing-card-height-width-ratio: 1.39; // height / width
+$playing-card-height: 175px;
+$playing-card-width: calc(#{$playing-card-height} / #{$playing-card-height-width-ratio});
+
+$playing-card-height-sm: 100px;
+$playing-card-width-sm: calc(#{$playing-card-height-sm} / #{$playing-card-height-width-ratio});

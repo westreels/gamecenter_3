@@ -1,0 +1,22 @@
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+  background-color: #5f1c7c !important;
+}
+.mdi-poker-chip:before {
+  content: url("../images/favicon/vra_24x24.png") !important;
+}
+.darken-60[data-v-74b842e9] {
+  background: rgb(0 0 0 / 28%) !important;
+}
+#primary-footer {
+  background-color: #3a0853 !important;
+  border-color: #bc74dc !important;
+}
+#primary-footer .v-avatar.grayscale[data-v-0b387be1] {
+  filter: none !important;
+}
+.v-application .text-h4 {
+  color: #fff;
+}
+.v-parallax__image {
+  transform: translate(-50%, 240px) !important;
+}

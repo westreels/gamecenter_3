@@ -1,0 +1,11 @@
+Horse Racing
+------------
+
+CHANGES HISTORY
+---------------
+v1.0.1 - 30 November 2020
+- Game info popup added.
+- Runner colors customization performance improvement.
+
+v1.0.0 - 29 October 2020
+- Initial release.

@@ -1,0 +1,24 @@
+{
+    "name": "@types/cssnano",
+    "version": "4.0.0",
+    "description": "TypeScript definitions for cssnano",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Armando Meziat",
+            "url": "https://github.com/odnamrataizem",
+            "githubUsername": "odnamrataizem"
+        }
+    ],
+    "main": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {
+        "postcss": "5 - 7"
+    },
+    "typesPublisherContentHash": "a43be2c23af399f805d4e3e547b96760d5764e23481854a118d64cb23f470e78",
+    "typeScriptVersion": "2.2"
+}

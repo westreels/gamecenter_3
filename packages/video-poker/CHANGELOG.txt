@@ -1,0 +1,22 @@
+Video Poker
+-----------
+
+CHANGES HISTORY
+---------------
+v1.0.5 - 26 June 2020
+- Ability to assign categories to the game and filter available games by categories on the front page.
+
+v1.0.4 - 19 June 2020
+- Minor code refactoring.
+
+v1.0.3 - 03 June 2020
+- Ability to set custom background image on the game page.
+
+v1.0.2 - 19 May 2020
+- Ability to edit the games image displayed on the home page.
+
+v1.0.1 - 23 March 2020
+- Security improvement.
+
+v1.0.0 - 24 January 2020
+- Initial release.

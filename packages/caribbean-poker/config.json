@@ -1,0 +1,16 @@
+{
+    "id": "caribbean-poker",
+    "name": "Caribbean Poker",
+    "type": "game",
+    "description": "This add-on implements Caribbean Poker game.",
+    "providers": [
+        "Packages\\CaribbeanPoker\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "caribbean-poker",
+    "source_path": "src",
+    "namespace": "Packages\\CaribbeanPoker\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/caribbean-poker-addon-for-stake-casino-gaming-platform/35324363",
+    "min_app_version": "1.15.0",
+    "hash": "3732e6101a787726077beb1cfc374caa"
+}

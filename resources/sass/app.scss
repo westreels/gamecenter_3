@@ -1,0 +1,177 @@
+@mixin light-scrollbar {
+  &::-webkit-scrollbar-track {
+    background: var(--v-secondary-lighten5);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--v-secondary-lighten2);
+    border: 3px solid var(--v-secondary-lighten5);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--v-secondary-lighten2);
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+@mixin dark-scrollbar {
+  &::-webkit-scrollbar-track {
+    background: var(--v-secondary-lighten2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: var(--v-secondary-darken1);
+    border: 3px solid var(--v-secondary-lighten2);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--v-secondary-darken1);
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--v-anchor-base)
+}
+
+.width-auto {
+  width: auto !important;
+}
+
+.game-snackbar {
+  > div {
+    width: 370px;
+  }
+}
+
+.v-input {
+  &.text-center {
+    input {
+      text-align: center;
+    }
+  }
+}
+
+.v-dialog {
+  .about-text {
+    max-height: 60vh;
+    overflow-y: scroll;
+  }
+}
+
+.v-parallax {
+  .v-parallax__content {
+    padding: 0;
+  }
+}
+
+.game-container {
+  .v-badge {
+    .v-badge__badge {
+      z-index: 10;
+    }
+  }
+}
+
+.static-background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.v-data-table tbody tr.v-data-table__empty-wrapper:hover:not(.v-data-table__expanded__content) {
+  background: inherit;
+}
+
+.input-with-button {
+  .v-input__append-inner {
+    margin-top: 10px;
+  }
+}
+
+.wrap-long-text {
+  table {
+    table-layout: fixed;
+
+    tbody {
+      tr {
+        td {
+          overflow-wrap: break-word;
+        }
+      }
+    }
+  }
+}
+
+#chat {
+  .v-navigation-drawer__content {
+    overflow-y: hidden;
+
+    .chat-messages-container {
+      height: 80%;
+      max-height: 80%;
+
+      // @todo: make custom scrollbar work work in the chat window
+      &.theme--light {
+        @include light-scrollbar
+      }
+
+      &.theme--dark {
+        @include dark-scrollbar
+      }
+
+      .v-list-item__content {
+        p {
+          font-size: 14px;
+          line-height: 14px;
+        }
+
+        .link {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.light-scrollbar {
+  @include light-scrollbar
+}
+
+.dark-scrollbar {
+  @include dark-scrollbar
+}
+
+.v-navigation-drawer {
+  .v-navigation-drawer__content {
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+  }
+
+  &.theme--light {
+    .v-navigation-drawer__content {
+      @include light-scrollbar
+    }
+  }
+
+  &.theme--dark {
+    .v-navigation-drawer__content {
+      @include dark-scrollbar
+    }
+  }
+}

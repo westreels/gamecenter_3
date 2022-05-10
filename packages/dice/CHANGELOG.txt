@@ -1,0 +1,19 @@
+Dice
+----
+
+CHANGES HISTORY
+---------------
+v1.0.4 - 26 June 2020
+- Ability to assign categories to the game and filter available games by categories on the front page.
+
+v1.0.3 - 03 June 2020
+- Ability to set custom background image on the game page.
+
+v1.0.2 - 18 May 2020
+- Bug fix: win number animation in the light theme.
+
+v1.0.1 - 23 March 2020
+- Security improvement.
+
+v1.0.0 - 28 January 2020
+- Initial release.

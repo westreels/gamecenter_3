@@ -1,0 +1,16 @@
+{
+    "id": "dice-3d",
+    "name": "Dice 3D",
+    "type": "game",
+    "description": "This add-on implements Dice 3D game.",
+    "providers": [
+        "Packages\\Dice3D\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "dice-3d",
+    "source_path": "src",
+    "namespace": "Packages\\Dice3D\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/dice-3d-addon-for-stake-casino-gaming-platform/26244902",
+    "min_app_version": "1.15.0",
+    "hash": "2c05dd6faaebce772cbf986e43d71f2b"
+}

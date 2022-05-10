@@ -1,0 +1,16 @@
+{
+    "id": "dice",
+    "name": "Dice",
+    "type": "game",
+    "description": "This add-on implements Dice game.",
+    "providers": [
+        "Packages\\Dice\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "dice",
+    "source_path": "src",
+    "namespace": "Packages\\Dice\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/dice-addon-for-stake-casino-gaming-platform/25626168",
+    "min_app_version": "1.15.0",
+    "hash": "11fb0a7f6b43726595f28f580b184922"
+}

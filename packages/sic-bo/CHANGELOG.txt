@@ -1,0 +1,7 @@
+Sic Bo
+------
+
+CHANGES HISTORY
+---------------
+v1.0.0 - 21 December 2020
+- Initial release.

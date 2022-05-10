@@ -1,0 +1,282 @@
+<h6 class="text-h6 mb-3">Table of contents</h6>
+
+<a href="#payments-q01" class="d-block">What payment gateways are supported?</a>
+<a href="#payments-q02" class="d-block">How to configure an automatic payment method?</a>
+<a href="#payments-q05" class="d-block">How to configure a manual payment method?</a>
+<a href="#payments-q03" class="d-block">How to configure payments via coinpayments.net?</a>
+<a href="#payments-q04" class="d-block">How to configure payments on Ethereum network via Metamask?</a>
+<a href="#payments-q06" class="d-block">How to configure payments on Binance Smart Chain network via Metamask?</a>
+<a href="#payments-q10" class="d-block">How to configure payments on Polygon network via Metamask?</a>
+<a href="#payments-q07" class="d-block">How to configure payments on Tron network via Tronlink?</a>
+<a href="#payments-q08" class="d-block">Why are payments made via Metamask / Tronlink not completed?</a>
+<a href="#payments-q09" class="d-block">I get a 500 server error after completing a deposit</a>
+
+<div id="payments-q01" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">What payment gateways are supported?</h6>
+  <p>
+    The following payment gateways and wallets are supported:
+  </p>
+  <ul>
+    <li>Paypal (only deposits)</li>
+    <li>Stripe (only deposits)</li>
+    <li>Coinpayments.net (deposits and withdrawals)</li>
+    <li>Metamask (deposits and withdrawals)</li>
+    <li>Tronlink (deposits and withdrawals)</li>
+  </ul>
+</div>
+
+<div id="payments-q02" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to configure an automatic payment method?</h6>
+  <p>
+    Generally, configuration of a payment method that is linked to some gateway (e.g. PayPal or Coinpayments) consists of these steps:
+  </p>
+  <ul>
+    <li>
+      Open <b>Backend</b> » <b>Settings</b> » <b>Add-on: Payments</b> page,
+      select the corresponding payment gateway (method) and fill its settings (e.g. an API key).
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Deposit Methods</b> page, find the corresponding method, click <b>Edit</b>,
+      fill <b>Reference currency</b>, <b>Reference exchange rate</b> and <b>Deposit Address</b> (where users will send their funds to) fields,
+      change the method status to <b>Enabled</b> and click <b>Save</b>.
+    </li>
+    <li>Open <b>Backend</b> » <b>Withdrawal Methods</b> page and complete the same steps as in the previous point.</li>
+  </ul>
+  <p class="mt-3">
+    Deposits made using one of these methods should be completed automatically without human intervention.
+  </p>
+</div>
+
+<div id="payments-q05" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to configure a manual payment method?</h6>
+  <ul>
+    <li>
+      Open <b>Backend</b> » <b>Deposit Methods</b> page, click <b>Create deposit method</b>,
+    </li>
+    <li>
+      Fill <b>Code</b>, <b>Name</b>, <b>Description</b>, <b>Reference currency</b> and <b>Reference exchange rate</b> fields.
+    </li>
+    <li>
+      Add any number of extra fields that users will require to fill when submitting a deposit request. For example,
+      you might want users to fill some wallet ID that they will send the funds from.
+    </li>
+    <li>
+      Change the method status to <b>Enabled</b> and click <b>Save</b>.
+    </li>
+    <li>Open <b>Backend</b> » <b>Withdrawal Methods</b> page and complete the same steps.</li>
+  </ul>
+  <p class="mt-3">
+    Manual deposits and withdrawals are not automatically completed and the administrator is expected to complete them manually one by one.
+  </p>
+</div>
+
+<div id="payments-q03" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to configure payments via coinpayments.net?</h6>
+  <ul>
+    <li>Sign up at <a href="https://www.coinpayments.net/" target="_blank">coinpayments.net</a>.</li>
+    <li>
+      Open <b>Account</b> » <b>Coin Acceptance Settings</b> page and select coins that you would like to accept
+      (these coins will be available for deposits and withdrawals).
+    </li>
+    <li>
+      Open <b>Account</b> » <b>Account Settings</b> page, select <b>Merchant Settings</b> tab and fill <b>IPN Secret</b> field.
+      It can be any random alphanumeric string.
+      Do <b>not</b> fill <b>IPN URL</b>, leave it blank.
+    </li>
+    <li>
+      Open <b>Account</b> » <b>API keys</b> page and click <b>Generate new key</b> button.
+      After it is generated click <b>Edit Permissions</b> button and enable the following permissions:
+      <ul>
+        <li>get_basic_info</li>
+        <li>create_transaction</li>
+        <li>get_tx_info</li>
+        <li>balances</li>
+        <li>create_withdrawal</li>
+        <li>Allow auto_confirm = 1 in create_withdrawal (only in case you like to enable auto confirmation of withdrawals)</li>
+        <li>get_withdrawal_info</li>
+        <li>rates</li>
+      </ul>
+    </li>
+    <li>
+      Copy <b>Merchant ID</b>, <b>Public key</b>, <b>Private key</b> and <b>IPN Secret</b>.
+      Input these keys in <b>Backend</b> » <b>Settings</b> » <b>Add-on: Payments</b> » <b>Coinpayments</b>.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Deposit Methods</b> page, find Coinpayments method and click <b>Edit</b>.
+      Fill <b>Reference currency</b>, <b>Reference exchange rate</b> and <b>Deposit Address</b> (where users will send their coins to) fields. <b>Reference currency</b>
+      can be any supported coin or fiat currency, e.g. USD or EUR. Change the deposit method status to <b>Enabled</b>
+      and click <b>Save</b>.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Withdrawal Methods</b> page and complete the same steps as in the previous point.
+    </li>
+  </ul>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        If you use a firewall or some external security service such as Cloudflare make sure to white list
+        all GET / POST requests to all URLs that start with <b>/api/webhooks</b>, otherwise instant payment notification (IPN)
+        messages will not reach your website and hence deposits / withdrawals will stuck in <b>Pending</b> status.
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="payments-q04" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to configure payments on Ethereum network via Metamask?</h6>
+  <ul>
+    <li>Sign up at <a href="https://etherscan.io/" target="_blank">etherscan.io</a> and get an API key.</li>
+    <li>
+      Open <b>Backend</b> » <b>Settings</b> » <b>Add-on: Payments</b> » <b>Ethereum</b>, input the API key
+      and choose the network.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Deposit Methods</b> page, find <b>ETH</b> or <b>ERC20</b> method and click <b>Edit</b>.
+      Fill <b>Reference currency</b>, <b>Reference exchange rate</b> and <b>Deposit Address</b> (where users will send their coins to) fields.
+      For payments in <b>ETH</b> the <b>Reference currency</b> can be set either to <b>ETH</b> (fixed exchange rate) or <b>USD</b> (dynamic exchange rate).
+      If it is set to <b>USD</b> the payment amount in ETH will be calculated automatically based
+      on the internal <b>USD / credits</b> rate and the market <b>ETH / USD</b> rate
+      (pulled from the crypto API defined in <b>Backend</b> » <b>Settings</b> » <b>Services</b> » <b>Crypto API</b>).
+      Change the deposit method status to <b>Enabled</b> and click <b>Save</b>.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Withdrawal Methods</b> page and complete the same steps as in the previous point.
+    </li>
+  </ul>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        To make payments using this method users need to install
+        <a href="https://metamask.io/" target="_blank">Metamask browser extension</a>.
+        Please note that this extension works only in desktop browsers.
+        To make payments on mobile phones users need to use a DApp browser,
+        e.g. the one provided by <a href="https://trustwallet.com/" target="_blank">Trust Wallet</a>.
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="payments-q06" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to configure payments on Binance Smart Chain network via Metamask?</h6>
+  <ul>
+    <li>Sign up at <a href="https://bscscan.com/" target="_blank">bscscan.com</a> and get an API key.</li>
+    <li>
+      Open <b>Backend</b> » <b>Settings</b> » <b>Add-on: Payments</b> » <b>Binance Smart Chain</b>, input the API key
+      and choose the network.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Deposit Methods</b> page, find <b>BNB</b> or <b>BEP20</b> method and click <b>Edit</b>.
+      Fill <b>Reference currency</b>, <b>Reference exchange rate</b> and <b>Deposit Address</b> (where users will send their coins to) fields.
+      For payments in <b>BNB</b> the <b>Reference currency</b> can be set either to <b>BNB</b> (fixed exchange rate) or <b>USD</b> (dynamic exchange rate).
+      If it is set to <b>USD</b> the payment amount in BNB will be calculated automatically based
+      on the internal <b>USD / credits</b> rate and the market <b>BNB / USD</b> rate
+      (pulled from the crypto API defined in <b>Backend</b> » <b>Settings</b> » <b>Services</b> » <b>Crypto API</b>).
+      Change the deposit method status to <b>Enabled</b> and click <b>Save</b>.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Withdrawal Methods</b> page and complete the same steps as in the previous point.
+    </li>
+  </ul>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        To make payments using this method users need to install
+        <a href="https://metamask.io/" target="_blank">Metamask browser extension</a> and connect Metamask
+        to Binance Smart Chain (<a href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain" target="_blank">read more</a>).
+        Please note that this extension works only in desktop browsers.
+        To make payments on mobile phones users need to use a DApp browser,
+        e.g. the one provided by <a href="https://trustwallet.com/" target="_blank">Trust Wallet</a>.
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="payments-q10" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to configure payments on Polygon network via Metamask?</h6>
+  <ul>
+    <li>Sign up at <a href="https://polygonscan.com/" target="_blank">polygonscan.com</a> and get an API key.</li>
+    <li>
+      Open <b>Backend</b> » <b>Settings</b> » <b>Add-on: Payments</b> » <b>Polygon</b>, input the API key
+      and choose the network.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Deposit Methods</b> page, find <b>MATIC</b> or <b>ERC20 Polygon</b> method and click <b>Edit</b>.
+      Fill <b>Reference currency</b>, <b>Reference exchange rate</b> and <b>Deposit Address</b> (where users will send their coins to) fields.
+      For payments in <b>MATIC</b> the <b>Reference currency</b> can be set either to <b>MATIC</b> (fixed exchange rate) or <b>USD</b> (dynamic exchange rate).
+      If it is set to <b>USD</b> the payment amount in BNB will be calculated automatically based
+      on the internal <b>USD / credits</b> rate and the market <b>MATIC / USD</b> rate
+      (pulled from the crypto API defined in <b>Backend</b> » <b>Settings</b> » <b>Services</b> » <b>Crypto API</b>).
+      Change the deposit method status to <b>Enabled</b> and click <b>Save</b>.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Withdrawal Methods</b> page and complete the same steps as in the previous point.
+    </li>
+  </ul>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        To make payments using this method users need to install
+        <a href="https://metamask.io/" target="_blank">Metamask browser extension</a> and connect Metamask
+        to Polygon network (<a href="https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask" target="_blank">read more</a>).
+        Please note that this extension works only in desktop browsers.
+        To make payments on mobile phones users need to use a DApp browser,
+        e.g. the one provided by <a href="https://trustwallet.com/" target="_blank">Trust Wallet</a>.
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="payments-q07" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">How to configure payments on Tron network via Tronlink?</h6>
+  <ul>
+    <li>
+      Open <b>Backend</b> » <b>Settings</b> » <b>Add-on: Payments</b> » <b>Tron</b> and choose the network.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Deposit Methods</b> page, find <b>TRX</b> or <b>TRC20</b> method and click <b>Edit</b>.
+      Fill <b>Reference currency</b>, <b>Reference exchange rate</b> and <b>Deposit Address</b> (where users will send their coins to) fields.
+      For payments in <b>TRX</b> the <b>Reference currency</b> can be set either to <b>TRX</b> (fixed exchange rate) or <b>USD</b> (dynamic exchange rate).
+      If it is set to <b>USD</b> the payment amount in TRX will be calculated automatically based
+      on the internal <b>USD / credits</b> rate and the market <b>TRX / USD</b> rate
+      (pulled from the crypto API defined in <b>Backend</b> » <b>Settings</b> » <b>Services</b> » <b>Crypto API</b>).
+      Change the deposit method status to <b>Enabled</b> and click <b>Save</b>.
+    </li>
+    <li>
+      Open <b>Backend</b> » <b>Withdrawal Methods</b> page and complete the same steps as in the previous point.
+    </li>
+  </ul>
+  <div role="alert" class="v-alert v-alert--dense v-sheet v-sheet--outlined v-alert--border v-alert--outlined v-alert--border-left warning--text mt-5">
+    <div class="v-alert__wrapper">
+      <div class="v-alert__content">
+        To make payments using this method users need to install
+        <a href="https://www.tronlink.org/" target="_blank">Tronlink browser extension</a>.
+        Please note that this extension works only in desktop browsers.
+        To make payments on mobile phones users need to use a DApp browser,
+        e.g. the one provided by Tronlink mobile app.
+      </div>
+      <div class="v-alert__border v-alert__border--left"></div>
+    </div>
+  </div>
+</div>
+
+<div id="payments-q09" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">Why are payments made via Metamask / Tronlink not completed?</h6>
+  <p>
+    Make sure that the cron job specified on <b>Backend</b> » <b>Maintenance</b> page is added to your server.
+    Please check the installation guide for more info how to set up a cron job.
+  </p>
+</div>
+
+<div id="payments-q08" style="padding-top: 90px;">
+  <h6 class="text-h6 mb-3">I get a 500 server error after completing a deposit</h6>
+  <p>
+    Go to <b>Backend</b> » <b>Settings</b> » <b>Email</b> » <b>Driver</b> and double check
+    that correct SMTP server credentials are specified.
+    If the error persists enable <b>Debug mode</b> (<b>Backend</b> » <b>Settings</b> » <b>Logging</b>) to get
+    more info about the error.
+  </p>
+</div>

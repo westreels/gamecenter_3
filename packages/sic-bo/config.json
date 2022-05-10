@@ -1,0 +1,16 @@
+{
+    "id": "sic-bo",
+    "name": "Sic Bo",
+    "type": "game",
+    "description": "This add-on implements Sic Bo game.",
+    "providers": [
+        "Packages\\SicBo\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "sic-bo",
+    "source_path": "src",
+    "namespace": "Packages\\SicBo\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/sic-bo-addon-for-stake-casino-gaming-platform/29810058",
+    "min_app_version": "1.15.0",
+    "hash": "9515e7a3971834263503786a0bead29c"
+}

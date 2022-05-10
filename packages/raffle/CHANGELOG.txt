@@ -1,0 +1,18 @@
+Raffle
+------
+
+CHANGES HISTORY
+---------------
+v1.0.3 - 29 April 2021
+- Small bug fix.
+
+v1.0.2 - 19 December 2020
+- Compatibility fix with the latest Stake release.
+
+v1.0.1 - 16 July 2020
+- Bots support (bots can buy random raffle tickets).
+- Ability to view raffle tickets in the backend.
+- Info window added to the raffles page.
+
+v1.0.0 - 14 July 2020
+- Initial release.

@@ -1,0 +1,10 @@
+Crash
+-----
+
+CHANGES HISTORY
+---------------
+v1.0.1 - 11 November 2021
+- Bug fix: client / server time sync in the countdown timer.
+
+v1.0.0 - 9 November 2021
+- Initial release.

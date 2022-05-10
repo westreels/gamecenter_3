@@ -1,0 +1,34 @@
+{
+    "name": "@types/babel-core",
+    "version": "6.25.6",
+    "description": "TypeScript definitions for babel-core",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Troy Gerwien",
+            "url": "https://github.com/yortus",
+            "githubUsername": "yortus"
+        },
+        {
+            "name": "Marvin Hagemeister",
+            "url": "https://github.com/marvinhagemeister",
+            "githubUsername": "marvinhagemeister"
+        }
+    ],
+    "main": "",
+    "types": "index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/babel-generator": "*",
+        "@types/babel-template": "*",
+        "@types/babel-traverse": "*",
+        "@types/babel-types": "*",
+        "@types/babylon": "*"
+    },
+    "typesPublisherContentHash": "b0d3357859faa071b5581d2efc1c37eb5688ae17e2b68af4ca7f1b0b91513bf2",
+    "typeScriptVersion": "2.8"
+}

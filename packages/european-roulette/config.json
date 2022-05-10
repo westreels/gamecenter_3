@@ -1,0 +1,16 @@
+{
+    "id": "european-roulette",
+    "name": "European roulette",
+    "type": "game",
+    "description": "This add-on implements European roulette game.",
+    "providers": [
+        "Packages\\EuropeanRoulette\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "european-roulette",
+    "source_path": "src",
+    "namespace": "Packages\\EuropeanRoulette\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/european-roulette-addon-for-stake-casino-gaming-platform/25795301",
+    "min_app_version": "1.15.0",
+    "hash": "e447479c6e469243dca0c70f0603f336"
+}

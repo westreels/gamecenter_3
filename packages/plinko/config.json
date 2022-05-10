@@ -1,0 +1,16 @@
+{
+    "id": "plinko",
+    "name": "Plinko",
+    "type": "game",
+    "description": "This add-on implements Plinko game.",
+    "providers": [
+        "Packages\\Plinko\\Providers\\PackageServiceProvider"
+    ],
+    "base_path": "plinko",
+    "source_path": "src",
+    "namespace": "Packages\\Plinko\\",
+    "static": {},
+    "purchase_url": "https://codecanyon.net/item/plinko-addon-for-stake-casino-gaming-platform/30151263",
+    "min_app_version": "1.15.0",
+    "hash": "56ce6b2d3c27ec0a17829292184dd145"
+}

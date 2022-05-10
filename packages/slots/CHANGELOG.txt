@@ -1,0 +1,38 @@
+Slots
+-----
+
+CHANGES HISTORY
+---------------
+v1.1.0 - 15 October 2021
+- Added display of the total bet amount.
+
+v1.0.9 - 17 August 2020
+- Ability to re-order Slot games in the settings (affects the display order on the front page and in the main menu).
+  Before making any changes open Slots settings and click Save.
+
+v1.0.8 - 30 July 2020
+- Bug fix: error when cloning an existing game.
+
+v1.0.7 - 26 June 2020
+- Ability to assign categories to the game and filter available games by categories on the front page.
+
+v1.0.6 - 19 June 2020
+- Bug fix: bots don't play this game.
+
+v1.0.5 - 03 June 2020
+- Ability to set custom background image on the game page.
+
+v1.0.4 - 19 May 2020
+- Bug fix: balance validation (front-end side).
+
+v1.0.3 - 8 May 2020
+- Bug fix: balance validation.
+
+v1.0.2 - 30 April 2020
+- Bug fix: balance is not displayed correctly after making a bet and before the game is completed.
+
+v1.0.1 - 23 March 2020
+- Security improvement.
+
+v1.0.0 - 19 March 2020
+- Initial release.

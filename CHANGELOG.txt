@@ -1,0 +1,203 @@
+Stake
+-----
+
+CHANGES HISTORY
+---------------
+v1.15.0 - 4 March 2022
+- Evoplay, BGaming providers support (this version is a prerequisite for installing the extra integration add-on).
+- GGR and NGR calculation added to the admin dashboard.
+
+v1.14.0 - 20 December 2021
+- Caribbean poker game support (this version is a prerequisite for installing this add-on).
+
+v1.13.2 - 18 November 2021
+- Core changes required for the Payments add-on.
+
+v1.13.1 - 11 November 2021
+- Minor fixes.
+
+v1.13.0 - 9 November 2021
+- Crash game support (this version is a prerequisite for installing this add-on).
+- Laravel framework is upgraded to version 8.61.0.
+- All PHP vendor packages are updated.
+- Ability to view log files in the backend.
+
+v1.12.3 - 10 September 2021
+- Cryptocompare.com API integrated (relevant for Crypto Prediction game).
+- Add simplified and traditional chinese languages.
+
+v1.12.2 - 22 August 2021
+- Bug fix: "This action is unauthorized" error in Crypto Prediction game.
+
+v1.12.1 - 11 August 2021
+- Slots 3D game support (this version is a prerequisite for installing this add-on).
+- Bug fix: social login with Twitter.
+
+v1.12.0 - 16 July 2021
+- Home page improvements:
+  * Social media links block added.
+  * Biggest win block added.
+  * Recent games block improved.
+- Application footer improved.
+- Help page added to backend.
+- Hide sign up and deposit bonus cards on the home page if these bonuses are set to zero.
+- Card deck images preloading added to all card games.
+- Minor improvements of Maintenance and Add-on pages.
+
+v1.11.1 - 30 June 2021
+- Bots support for Crypto price prediction game.
+
+v1.11.0 - 26 June 2021
+- Crypto price prediction game support (this version is a prerequisite for installing this add-on).
+
+v1.10.2 - 27 May 2021
+- Auto play support for Dice.
+- German translation improved.
+
+v1.10.1 - 24 May 2021
+- Chat rain feature added (active users in chat can receive extra credits on a regular basis).
+
+v1.10.0 - 20 May 2021
+- Multiplayer roulette game support (this version is a prerequisite for installing this add-on).
+- Support for custom card decks added (plus 3 new card decks to choose from).
+- Game feed is now disabled on mobiles by default.
+
+v1.9.2 - 13 April 2021
+- Keno game support (this version is a prerequisite for installing this add-on).
+
+v1.9.1 - 6 April 2021
+- Bug fix: shift issue on mobiles when using Stars background animation.
+- Circles background animation added.
+
+v1.9.0 - 26 March 2021
+IMPORTANT: Laravel framework is upgraded to v8.27, so please make sure PHP 7.3 or higher is installed on your website.
+
+- Faucet (ability for users to request free extra credits).
+- User online presense tracking (Pusher is required).
+- Live games feed (Pusher is required).
+- Ability to restrict access to various pages for admin accounts.
+- System bar with extra info (number of online users, number of games, last win).
+- Ability to make the main navigation bar visible permanently (except for mobiles).
+- Bonuses for email verification.
+- Filters added to the administrative pages.
+- "View" and "Details" game information pages combined into one.
+- Bug fixes and code re-factoring.
+
+v1.8.2 - 19 January 2021
+- Plinko game support (this version is a prerequisite for installing this add-on).
+
+v1.8.1 - 24 December 2020
+- Bug fix: affiliates are not assigned during sign up.
+- Bug fix: gravatars stopped working.
+- Bug fix: don't escape unicode characters in the app settings.
+
+v1.8.0 - 19 December 2020
+- Sic Bo game support (this version is a prerequisite for installing this add-on).
+- Laravel framework upgraded to v7.30.0.
+
+v1.7.0 - 30 November 2020
+- Ability to enable admin email notifications when a user signs up, wins or loses more than a specific amount.
+- Ability to disable / hide the leaderboard page for all users.
+- Minor bug fixes for the light theme.
+- Bug fix: "last login at" and "last login from" are not filled after the initial user registration.
+
+v1.6.0 - 29 October 2020
+- Horse racing add-on support (this version is a prerequisite for installing this add-on).
+- Ability to customize home page template in the backend - add custom HTML markup or remove default blocks.
+- Don't display zero commissions on affiliate program page for users. Display deposit commissions.
+- Ability to upload / change user and bots avatars in the backend.
+- A mandatory checkbox added to the sign up form: I accept "Terms of use" and "Privacy policy".
+- Sign up link added to the login form.
+
+v1.5.1 - 26 June 2020
+- Raffle add-on support (this version is a prerequisite for installing this add-on).
+- Games combined into a nested list in the main menu.
+- Minor fixes and improvements.
+
+v1.5.0 - 26 June 2020
+- Ability to filter games by categories on the front page (categories can be assigned in the backend).
+- Ability to filter by period in the leaderboard.
+- Ability for every user to hide their profit from display on leaderboard and profile pages (this setting is available on the user profile page).
+- Ability to filter by period in the backend dashboard.
+
+v1.4.0 - 19 June 2020
+- Casino Hold'em game support (this version is a prerequisite for installing this game add-on).
+- Laravel and other 3rd party libraries updated.
+
+v1.3.9 - 9 June 2020
+- Lucky Wheel game support (this version is a prerequisite for installing this game add-on).
+
+v1.3.8 - 3 June 2020
+- Home page slider implemented.
+- Ability to set custom background image for every game page.
+- Links to deposits / withdrawals pages added to the main menu.
+
+v1.3.7 - 19 May 2020
+- Ability to edit games images displayed on the home page.
+- PWA optimization.
+
+v1.3.6 - 8 May 2020
+- Multiplayer Blackjack game support (this version is a prerequisite for installing this game add-on).
+
+v1.3.5 - 20 April 2020
+- Google reCaptcha v2 integration implemented (login, registration and password reset forms).
+
+v1.3.4 - 15 April 2020
+- Progressive Web Application (PWA) support added, which allows the app to be added to the home screen of an iOS or Android device.
+
+v1.3.3 - 13 April 2020
+- Heads Or Tails game support (this version is a prerequisite for installing this game add-on).
+
+v1.3.2 - 11 April 2020
+- Fixes related to Payments add-on.
+
+v1.3.1 - 2 April 2020
+- Minor fixes.
+
+v1.3.0 - 1 April 2020
+IMPORTANT: Please make sure you have PHP 7.2.5 or higher before installing this update.
+
+- Dice 3D game support (this version is a prerequisite for installing this game add-on).
+- Laravel framework upgrade from version 6.x to 7.2.2.
+- JWT auth replaced with native session based auth using Laravel Sanctum.
+
+v1.2.8 - 23 March 2020
+- Security improvement.
+
+v1.2.7 - 19 March 2020
+- Slots games support (this version is a prerequisite for installing the Slots game add-on).
+- Security patch.
+
+v1.2.6 - 20 February 2020
+- Bug fix: incorrect flags used for Estonia and Slovenia.
+- European roulette game support (this version is a prerequisite for installing the European roulette game add-on).
+- Necessary changes to support deposits via Metamask (Payments add-on is required).
+
+v1.2.5 - 13 February 2020
+- Minor fixes and improvements.
+
+v1.2.4 - 12 February 2020
+- Minor fixes and improvements.
+
+v1.2.3 - 7 February 2020
+- Payments add-on support (this version is a prerequisite for installing the Payments add-on).
+
+v1.2.2 - 28 January 2020
+- Dice game support (this version is a prerequisite for installing the Dice game add-on).
+- Ability to add custom links to footer menu.
+- Bug fix: impossible to save settings.
+
+v1.2.1 - 23 January 2020
+- Video poker game support (this version is a prerequisite for installing the Video Poker add-on).
+
+v1.2.0 - 22 January 2020
+- Multi-room chat implemented.
+- Add-ons management impemented.
+
+v1.1.0 - 17 January 2020
+- Affiliate program implemented.
+- Google Tag Manager integration implemented.
+- Overall interface improvements and bug fixes.
+
+v1.0.0 - 27 December 2019
+- Initial release.
