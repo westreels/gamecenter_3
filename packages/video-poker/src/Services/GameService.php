@@ -69,7 +69,7 @@ class GameService extends ParentGameService
      *
      * @return GameService
      */
-    public function draw($params) //: GameService
+    public function draw($params): GameService
     {
         $gameable = $this->getGameable();
 
