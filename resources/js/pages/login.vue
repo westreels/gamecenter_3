@@ -16,67 +16,15 @@
           <v-card-text>
             <o-auth />
             <v-form v-model="formIsValid" @submit.prevent="login">
-              <v-text-field
-                v-model="form.email"
-                :label="$t('Email')"
-                type="email"
-                name="email"
-                :rules="[validationRequired, validationEmail]"
-                :error="form.errors.has('email')"
-                :error-messages="form.errors.get('email')"
-                outlined
-                @keydown="clearFormErrors"
-              />
-
-              <v-text-field
-                v-model="form.password"
-                :label="$t('Password')"
-                :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-                :type="showPassword ? 'text' : 'password'"
-                name="password"
-                :rules="[validationRequired]"
-                :error="form.errors.has('password')"
-                :error-messages="form.errors.get('password')"
-                outlined
-                :counter="true"
-                @click:append="showPassword = !showPassword"
-                @keydown="clearFormErrors"
-              />
-
-              <v-checkbox
-                v-model="form.remember"
-                name="remember"
-                :label="$t('Remember me')"
-                color="primary"
-                true-value="1"
-                false-value=""
-              />
-
-              <vue-recaptcha
-                v-if="recaptchaPublicKey"
-                ref="recaptcha"
-                :sitekey="recaptchaPublicKey"
-                :loadRecaptchaScript="true"
-                :theme="this.$vuetify.theme.isDark ? 'dark' : 'light'"
-                class="mb-3"
-                @verify="token => form.recaptcha = token"
-              />
-
-              <v-row align="center">
-                <v-col class="text-center text-md-left">
-                  <v-btn type="submit" color="primary" :disabled="!formIsValid || loading || (!!recaptchaPublicKey && !form.recaptcha)" :loading="loading">
-                    {{ $t('Log in') }}
-                  </v-btn>
-                </v-col>
-                <v-col class="d-flex flex-column text-center text-md-right">
-                  <router-link :to="{ name: 'register' }">
-                    {{ $t('Not signed up?') }}
-                  </router-link>
-                  <router-link :to="{ name: 'password.email' }">
-                    {{ $t('Forgot password?') }}
-                  </router-link>
-                </v-col>
-              </v-row>
+              <a :href="urlLogin">
+                <v-btn
+                    style="background: linear-gradient(283.85deg, #1B0441 -30.23%, #521698 76.26%)"
+                    depressed
+                    color="primary"
+                >
+                  Login with your social account
+                </v-btn>
+              </a>
             </v-form>
           </v-card-text>
         </v-card>
@@ -128,7 +76,14 @@ export default {
     },
     recaptchaPublicKey () {
       return config('services.recaptcha.public_key')
-    }
+    },
+    urlLogin () {
+      const domain = window.config.define.social.domain;
+      const appId = window.config.define.social.app_id;
+      const appSecret = window.config.define.social.app_secret;
+
+      return `${domain}/oauth?app_id=${appId}&app_secret=${appSecret}`
+    },
   },
 
   methods: {
@@ -142,6 +97,7 @@ export default {
 
       // log in
       const { data } = await this.form.post('/api/auth/login')
+      
         .catch(() => {
           if (this.recaptchaPublicKey) {
             this.form.recaptcha = null
@@ -153,7 +109,8 @@ export default {
 
       // in case of any error data will be undefined
       if (data) {
-        // Store the user
+        // Store the users
+
         this.$store.dispatch('auth/updateUser', data)
 
         if (this.user.two_factor_auth_enabled && !this.user.two_factor_auth_passed) {

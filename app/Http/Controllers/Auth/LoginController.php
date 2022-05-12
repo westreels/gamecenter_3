@@ -40,27 +40,24 @@ class LoginController extends Controller
         $data = $request->only([
             'code',
         ]);
+        
+        try {
+            $user = resolve(AuthService::class)->handle($data, $request);
 
-        $user = resolve(AuthService::class)->handle($data, $request);
-
-        return response()->json($user, 200);
-        // try {
-        //     $user = resolve(AuthService::class)->handle($data, $request);
-
-        //     return response()->json($user, 200);
-        // } catch (AuthenticationException $exception) {
-        //     return response()->json([
-        //         'status_code' => 401,
-        //         'message' => $exception->getMessage(),
-        //         'errors' => [],
-        //     ], 401);
-        // } catch (\Exception $exception) {
-        //     return response()->json([
-        //         'status_code' => 500,
-        //         'message' => 'Error server',
-        //         'errors' => [],
-        //     ], 500);
-        // }
+            return response()->json($user, 200);
+        } catch (AuthenticationException $exception) {
+            return response()->json([
+                'status_code' => 401,
+                'message' => $exception->getMessage(),
+                'errors' => [],
+            ], 401);
+        } catch (\Exception $exception) {
+            return response()->json([
+                'status_code' => 500,
+                'message' => 'Error server',
+                'errors' => [],
+            ], 500);
+        }
     }
 
     /**

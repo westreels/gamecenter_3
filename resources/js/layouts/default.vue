@@ -120,12 +120,12 @@
       <v-spacer />
 
       <template v-if="!token && !authenticated">
-        <a style="text-decoration: none;" href="https://my.bizverse.world/oauth?app_id=0e0c42c6c478f1b9f925&app_secret=1ff4800c8caad3e92b257dbff7cff28771cf0f2">
-           <v-btn class="secondary">
+        <a style="text-decoration: none;" :href="urlLogin">
+          <v-btn class="secondary">
             Login
           </v-btn>
         </a>
-        <a style="text-decoration: none;" href="https://my.bizverse.world/register">
+        <a style="text-decoration: none;" :href="urlSignUp">
           <v-btn class="primary ml-2">
             Sign up
           </v-btn>
@@ -351,6 +351,18 @@ export default {
     }),
     appName () {
       return config('app.name')
+    },
+    urlLogin () {
+      console.log(window.config.define.social.app_id);
+      const domain = window.config.define.social.domain;
+      const appId = window.config.define.social.app_id;
+      const appSecret = window.config.define.social.app_secret;
+
+      return `${domain}/oauth?app_id=${appId}&app_secret=${appSecret}`
+    },
+    urlSignUp () {
+      const domain = window.config.define.social.domain;
+      return `${domain}/register`
     },
     appLogoUrl () {
       return config('app.logo')
