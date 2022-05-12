@@ -73,7 +73,7 @@ class GamePlayed implements ShouldBroadcastNow
         // $game['account']['balance'] = $body['data']['data']['balance'];
         // dd($game);
 
-        $game['account'] = ['user' => $this->user->only('id', 'name', 'avatar_url')];
+        $game['account'] = ['user' => $this->user->only('id', 'name', 'avatar')];
 
         // $game['account'] = ['user' => $this->game->account->user->only('id', 'name', 'avatar_url')];
 
